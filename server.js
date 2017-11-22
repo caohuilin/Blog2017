@@ -5,7 +5,8 @@ const mobxReact = require('mobx-react')
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
 
-const app = next({ dev })
+
+const app = next({ dev, dir: "ts_dist" })
 const handle = app.getRequestHandler()
 
 mobxReact.useStaticRendering(true)

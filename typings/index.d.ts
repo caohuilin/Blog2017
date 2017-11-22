@@ -14,6 +14,7 @@ declare module 'next/head' {
 
 declare module 'next/router' {
   const m: any;
+  export const withRouter:any;
   export default m;
 }
 
@@ -22,8 +23,8 @@ declare module 'next-routes' {
   export default m;
 }
 
-declare namespace JSX {
-  interface IntrinsicElements {
-    style: React.HTMLProps<HTMLStyleElement> | { jsx: boolean };
-  }
-}
+// declare namespace JSX {
+//   interface IntrinsicElements {
+//     style: React.HTMLProps<HTMLStyleElement> | { jsx: boolean };
+//   }
+// }

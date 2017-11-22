@@ -4,6 +4,12 @@
     "module": "commonjs",
     "strict": true,
     "target": "es2017",
+    "outDir": "ts_dist",
     "experimentalDecorators": true
-  }
+  },
+  "include": [
+    "components/**/*",
+    "pages/**/*",
+    "typings/**/*"
+  ]
 }

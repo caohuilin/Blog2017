@@ -1,1 +1,3 @@
 .next
+ts_dist/*.js
+ts_dist/**/*.js
