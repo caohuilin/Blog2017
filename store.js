@@ -3,35 +3,34 @@ import { action, observable } from 'mobx'
 let store = null
 
 class Store {
-  @observable lastUpdate = 0
-  @observable light = false
-  @observable num = 1
+  @observable showSelectMenu = false
+  @observable currentMenu = 2
 
-  constructor(isServer, lastUpdate, num) {
-    this.lastUpdate = lastUpdate
-    this.num = num
+  constructor(isServer, showSelectMenu, currentMenu) {
+    this.showSelectMenu = showSelectMenu
+    this.currentMenu = currentMenu
   }
 
-  @action start = () => {
-    this.timer = setInterval(() => {
-      this.lastUpdate = Date.now()
-      this.light = true
-    })
+  @action showMenu = () => {
+    this.showSelectMenu = !this.showSelectMenu
   }
 
-  @action add = () => {
-    this.num = this.num + 1
+  @action hideMenu = () => {
+    this.showSelectMenu = !this.showSelectMenu
   }
 
-  stop = () => clearInterval(this.timer)
+  @action changeCurrentMenu = (id) => {
+    this.currentMenu = id
+  }
+
 }
 
-export function initStore(isServer, lastUpdate = Date.now(), num = 1) {
+export function initStore(isServer, showSelectMenu = false, currentMenu = 2) {
   if (isServer) {
-    return new Store(isServer, lastUpdate, num)
+    return new Store(isServer, showSelectMenu, currentMenu)
   } else {
     if (store === null) {
-      store = new Store(isServer, lastUpdate, num)
+      store = new Store(isServer, showSelectMenu, currentMenu)
     }
     return store
   }

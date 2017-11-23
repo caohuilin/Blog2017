@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "Hex-monograms";
+    src: url('../static/fonts/Hex-monograms.otf') format('otf'), url('../static/fonts/Hex-monograms.ttf') format('truetype'), url('../static/fonts/Hex-ornate.otf') format('otf'), url('../static/fonts/Hex-ornate.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 484714 */
+  src: url('//at.alicdn.com/t/font_484714_qpv2kiufzp8pvi.eot');
+  src: url('//at.alicdn.com/t/font_484714_qpv2kiufzp8pvi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_484714_qpv2kiufzp8pvi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_484714_qpv2kiufzp8pvi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_484714_qpv2kiufzp8pvi.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font: 500 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
+}
+
+body {
+    background: #eeeeee;
+}
+
+a {
+    text-decoration: none;
+}
+
+.page {
+    width: 90%;
+    max-width: 960px;
+    min-height: calc(100vh - 11rem);
+    color: #5e5e5e;
+    background-color: rgb(255, 255, 255);
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 45px, rgba(0, 0, 0, 0.22) 0px 10px 18px;
+    border-radius: 2px;
+    text-align: center;
+    margin: 3rem auto;
+}
+
+header {
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+nav {
+    ul {
+        display: flex;
+        li+li {
+            margin-left: 30px;
+        }
+        .nav-link {
+            color: #e7e7e7;
+            &:hover {
+                color: #5e5e5e;
+            }
+        }
+        .home-link {
+            color: #5e5e5e;
+        }
+    }
+}
+
+#logo {
+    font-family: 'Hex-monograms';
+    font-size: 50px;
+    line-height: 50px;
+    height: 50px;
+    color: #5e5e5e;
+}
