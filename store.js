@@ -1,14 +1,13 @@
 import { action, observable } from 'mobx'
 
-let store: any = null
+let store = null
 
 class Store {
-  @observable lastUpdate: any = 0
-  @observable light: boolean = false
-  @observable num: number = 1
+  @observable lastUpdate = 0
+  @observable light = false
+  @observable num = 1
 
-  private timer: any
-  constructor(isServer: boolean, lastUpdate: any, num: number) {
+  constructor(isServer, lastUpdate, num) {
     this.lastUpdate = lastUpdate
     this.num = num
   }
@@ -24,10 +23,10 @@ class Store {
     this.num = this.num + 1
   }
 
-  public stop = () => clearInterval(this.timer)
+  stop = () => clearInterval(this.timer)
 }
 
-export function initStore(isServer: boolean, lastUpdate = Date.now(), num = 1) {
+export function initStore(isServer, lastUpdate = Date.now(), num = 1) {
   if (isServer) {
     return new Store(isServer, lastUpdate, num)
   } else {

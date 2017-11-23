@@ -1,18 +1,17 @@
-import * as React from 'react'
+import React from 'react'
 import { Provider } from 'mobx-react'
 import Layout from '../components/layout'
 import Page from '../components/page'
 import { initStore } from '../store'
 
-export default class Home extends React.Component<any, any> {
-  store: any
+export default class Home extends React.Component {
 
-  constructor(props: any) {
+  constructor(props) {
     super(props)
     this.store = initStore(props.isServer, props.lastUpdate, props.num)
   }
 
-  getInitialProps({ req }: any) {
+  getInitialProps({ req }) {
     const isServer = !!req
     const store = initStore(isServer)
     return { lastUpdate: store.lastUpdate, isServer, num: store.num }

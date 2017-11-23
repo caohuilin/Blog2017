@@ -1,8 +1,8 @@
-import * as React from 'react'
+import React from 'react'
 import Layout from '../components/layout'
 import 'isomorphic-unfetch'
 
-export default class About extends React.Component<any, any> {
+export default class About extends React.Component {
   async getInitialProps() {
     // eslint-disable-next-line no-undef
     const res = await fetch('https://api.github.com/repos/developit/preact')

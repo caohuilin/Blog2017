@@ -1,8 +1,9 @@
 import Head from 'next/head'
-import * as React from 'react'
+import React from 'react'
 import Link from './link'
+import stylesheet from './layout.css'
 
-export default ({ children, title = 'This is the default title' }: any) => (
+export default ({ children, title = 'This is the default title' }) => (
   <div>
     <Head>
       <title>{title}</title>
@@ -10,24 +11,8 @@ export default ({ children, title = 'This is the default title' }: any) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <header>
+      <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
       <nav>
-        <style jsx>{`
-          .active:after {
-            content: ' (current page)';
-          }
-          .nav-link {
-            text-decoration: none;
-            padding: 10px;
-            display: block;
-          }
-          ul {
-            border: solid 1px #333333;
-            li {
-              background: blue;
-            }
-          }
-        `}</style>
-
         <ul>
           <li>
             <Link activeClassName="active" href="/">

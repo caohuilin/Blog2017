@@ -1,0 +1,13 @@
+.active:after {
+  content: ' (current page)';
+}
+.nav-link {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+ul {
+  li {
+    background: blue;
+  }
+}

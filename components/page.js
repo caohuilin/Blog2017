@@ -4,7 +4,7 @@ import { inject, observer } from 'mobx-react'
 import Clock from './clock'
 
 @inject('store') @observer
-class Page extends React.Component<any, any> {
+class Page extends React.Component {
   componentDidMount () {
     this.props.store.start()
   }
