@@ -21,8 +21,8 @@ app.prepare()
     ctx.respond = false
   })
 
-  router.get('/about', async ctx => {
-    await app.render(ctx.req, ctx.res, '/about', ctx.query)
+  router.get('/article/:id', async ctx => {
+    await app.render(ctx.req, ctx.res, '/article', ctx.query)
     ctx.respond = false
   })
 

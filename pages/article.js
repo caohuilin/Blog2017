@@ -1,12 +1,11 @@
 import React from 'react';
 import { Provider } from 'mobx-react';
 import Layout from '../components/layout';
-import Select from '../components/select';
-import ArticleList from '../components/articleList';
+import Article from '../components/article';
 import { initStore } from '../store';
 import style from '../styles/main.css';
 
-export default class Home extends React.Component {
+export default class Content extends React.Component {
   constructor(props) {
     super(props);
     this.store = initStore(
@@ -27,12 +26,12 @@ export default class Home extends React.Component {
   }
 
   render() {
+    const id = this.props.url.query.id
     return (
       <Provider store={this.store}>
         <Layout>
           <style dangerouslySetInnerHTML={{ __html: style }} />
-          <Select />
-          <ArticleList />
+          <Article id={id}/>
         </Layout>
       </Provider>
     );

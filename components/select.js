@@ -62,6 +62,7 @@ class Select extends React.Component {
   }
   handleScroll = e => {
     e.preventDefault()
+    e.stopPropagation()
     const y = e.deltaY
     const currentMenu = this.props.store.currentMenu
     let nextMenu = currentMenu;
@@ -136,7 +137,8 @@ class Select extends React.Component {
                         onMouseOver={this.showMenu}
                       >
                         <span>{item.value}</span>
-                        {k === 0 && <i className="iconfont">&#xe605;</i>}
+                        {k === 0 && showSelectMenu && <i className="iconfont">&#xe607;</i>}
+                        {k === 0 && !showSelectMenu && <i className="iconfont">&#xe608;</i>}
                       </li>
                     );
                   }}

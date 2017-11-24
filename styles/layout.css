@@ -7,11 +7,11 @@
 
 @font-face {
   font-family: 'iconfont';  /* project id 484714 */
-  src: url('//at.alicdn.com/t/font_484714_qpv2kiufzp8pvi.eot');
-  src: url('//at.alicdn.com/t/font_484714_qpv2kiufzp8pvi.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_484714_qpv2kiufzp8pvi.woff') format('woff'),
-  url('//at.alicdn.com/t/font_484714_qpv2kiufzp8pvi.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_484714_qpv2kiufzp8pvi.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_484714_5h89t8dbvnuq5mi.eot');
+  src: url('//at.alicdn.com/t/font_484714_5h89t8dbvnuq5mi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_484714_5h89t8dbvnuq5mi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_484714_5h89t8dbvnuq5mi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_484714_5h89t8dbvnuq5mi.svg#iconfont') format('svg');
 }
 
 .iconfont {
@@ -38,7 +38,7 @@ a {
 .page {
     width: 90%;
     max-width: 960px;
-    min-height: calc(100vh - 11rem);
+    min-height: calc(100vh - 6rem);
     color: #5e5e5e;
     background-color: rgb(255, 255, 255);
     transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
@@ -57,24 +57,23 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 50px;
-}
-
-nav {
-    ul {
-        display: flex;
-        li+li {
-            margin-left: 30px;
-        }
-        .nav-link {
-            color: #e7e7e7;
-            &:hover {
-                color: #5e5e5e;
-            }
-        }
-        .home-link {
-            color: #5e5e5e;
-        }
-    }
+    nav {
+      ul {
+          display: flex;
+          li+li {
+              margin-left: 30px;
+          }
+          .nav-link {
+              color: #e7e7e7;
+              &:hover {
+                  color: #5e5e5e;
+              }
+          }
+          .home-link {
+              color: #5e5e5e;
+          }
+      }
+  }
 }
 
 #logo {
