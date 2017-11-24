@@ -33,7 +33,7 @@ const selects = [
     id: 6,
     value: '其他'
   }
-];
+]
 @inject('store')
 @observer
 class Select extends React.Component {
@@ -55,13 +55,13 @@ class Select extends React.Component {
   };
   showMenu = () => {
     this.props.store.showMenu()
-  };
+  }
 
   hideMenu = () => {
     this.props.store.hideMenu()
-  };
-  handleScroll = (e) => {
-    console.log('aa');
+  }
+  handleScroll = e => {
+    e.preventDefault()
     const y = e.deltaY
     const currentMenu = this.props.store.currentMenu
     let nextMenu = currentMenu;
@@ -75,16 +75,36 @@ class Select extends React.Component {
       this.props.store.changeCurrentMenu(nextMenu)
     }
   }
-  throttledScroll = _.throttle(this.handleScroll, 500, { trailing: false })
+  handleKeyDown = e => {
+    const code = e.keyCode
+    const currentMenu = this.props.store.currentMenu
+    const showSelectMenu = this.props.store.showSelectMenu
+    let nextMenu = currentMenu;
+    if (showSelectMenu) {
+      if (code === 38) {
+        nextMenu = nextMenu + 1 === selects.length ? 0 : nextMenu + 1
+      }
+      if (code === 40) {
+        nextMenu = nextMenu - 1 === -1 ? selects.length - 1 : nextMenu - 1
+      }
+      if (nextMenu !== currentMenu) {
+        this.props.store.changeCurrentMenu(nextMenu)
+      }
+    }
+  }
+  throttledScroll = _.throttle(this.handleScroll, 500, { trailing: false });
+  throttledKeyDown = _.throttle(this.handleKeyDown, 100, { trailing: false });
+  componentDidMount() {
+    window.addEventListener('keydown', this.throttledKeyDown);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.throttledKeyDown);
+  }
   render() {
     const { showSelectMenu, currentMenu } = this.props.store;
-    console.log('bb', currentMenu);
     return (
       <div className="menu">
         <div className="selected">
-          {/* <label onMouseOver={this.showMenu()}>
-            <span>{selects[currentMenu].value}</span> <i className="iconfont">&#xe605;</i>
-          </label> */}
           <ul onMouseOut={this.hideMenu} onWheel={this.throttledScroll}>
             {selects.map(item => {
               let k = item.id - currentMenu;
@@ -96,7 +116,7 @@ class Select extends React.Component {
               const fontSize = 30 - Math.abs(k) * 5;
               const opacity = 1 - Math.abs(k) * 0.2;
               const translate = showSelectMenu ? this.getPosition(k) : 0;
-              console.log('li', item.id, item.value, k, translate);
+              const filter = Math.abs(k) / 5.0;
               return (
                 <Motion key={item.id} style={{ x: spring(translate) }}>
                   {({ x }) => {
@@ -106,6 +126,7 @@ class Select extends React.Component {
                       fontSize: fontSize,
                       opacity: opacity,
                       transform: `translateY(${x}px)`,
+                      textShadow: `0 0 ${filter}px rgba(94, 94, 94, 1)`
                     };
                     return (
                       <li
@@ -124,7 +145,7 @@ class Select extends React.Component {
             })}
           </ul>
         </div>
-        <span className='line'/>
+        <span className="line" />
       </div>
     );
   }
