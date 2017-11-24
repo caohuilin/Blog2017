@@ -12,11 +12,11 @@ class Store {
   }
 
   @action showMenu = () => {
-    this.showSelectMenu = !this.showSelectMenu
+    this.showSelectMenu = true
   }
 
   @action hideMenu = () => {
-    this.showSelectMenu = !this.showSelectMenu
+    this.showSelectMenu = false
   }
 
   @action changeCurrentMenu = (id) => {

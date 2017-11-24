@@ -15,6 +15,7 @@
     "isomorphic-unfetch": "^2.0.0",
     "koa": "^2.0.1",
     "koa-router": "^7.1.0",
+    "lodash": "^4.17.4",
     "lost": "8.2.0",
     "mime": "^2.0.3",
     "mobx": "^2.7.0",
