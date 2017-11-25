@@ -24,15 +24,16 @@
     ul {
         width: calc(100% - 120px);
         li {
+            padding-left: 1px;
             position: absolute;
             left: 0;
             top: 0;
-            background: #ffffff;
             width: 100%;
             display: flex;
             justify-content: space-between;
             cursor: default;
             user-select: none;
+            transition: 'background' ease 0.05s;
         }
         .item-0 {
             z-index: 3;
@@ -119,7 +120,6 @@
         font-size: 14px;
         text-indent: 2rem;
         line-height: 30px;
-        transition: all 2s ease 1s;
     }
     .information {
         opacity: 0;
