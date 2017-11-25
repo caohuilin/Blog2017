@@ -16,7 +16,7 @@ class Article extends React.Component {
       }
     : {
       filter: `blur(0px)`,
-      transition: `0.3s filter linear`
+      transition: `0.1s filter linear`
     };
     return (
       <nav className="content">

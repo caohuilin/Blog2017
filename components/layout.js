@@ -8,6 +8,20 @@ import layout from '../styles/layout.css';
 @inject('store')
 @observer
 export default class Layout extends React.Component {
+  handleWheel = (e) => {
+    if (this.props.store.disableScroll) {
+      e.preventDefault()
+    }
+  }
+
+  componentDidMount() {
+    document.body.addEventListener('wheel', this.handleWheel)
+  }
+
+  componentWillUnmount() {
+    document.body.removeEventListener('wheel', this.handleWheel);
+  }
+
   render() {
     const { title, children } = this.props;
     const { showSelectMenu } = this.props.store;
