@@ -1,8 +1,9 @@
-import * as React from 'react';
-import Link from 'next/link';
-import { Motion, spring } from 'react-motion';
-import { inject, observer } from 'mobx-react';
-import * as _ from 'lodash';
+import * as React from 'react'
+import Link from 'next/link'
+import classnames from 'classnames'
+import { Motion, spring } from 'react-motion'
+import { inject, observer } from 'mobx-react'
+import * as _ from 'lodash'
 
 const selects = [
   {
@@ -137,8 +138,7 @@ class Select extends React.Component {
                         onMouseOver={this.showMenu}
                       >
                         <span>{item.value}</span>
-                        {k === 0 && showSelectMenu && <i className="iconfont">&#xe607;</i>}
-                        {k === 0 && !showSelectMenu && <i className="iconfont">&#xe608;</i>}
+                        {k === 0 && <i className={classnames({'iconfont': true, 'rotate-180': showSelectMenu, 'iconfont-transition': true})}>&#xe607;</i>}
                       </li>
                     );
                   }}

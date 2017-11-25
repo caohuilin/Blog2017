@@ -23,6 +23,14 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.iconfont-transition {
+  transition: transform ease 0.05s;
+}
+
 html {
     font: 500 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
 }
