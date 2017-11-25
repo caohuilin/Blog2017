@@ -50,6 +50,14 @@
 .content {
     padding: 20px 60px 50px 60px;
     text-align: left;
+    .blur {
+      filter: blur(5px);
+      transition: 0.3s filter linear;
+    }
+    .unblur {
+      filter: blur(0px);
+      transition: 0.1s filter linear;
+    }
     ul {
         display: flex;
         justify-content: space-between;
