@@ -14,12 +14,20 @@ export default class Layout extends React.Component {
     }
   }
 
+  handleKeyDown = (e) => {
+    if (this.props.store.disableScroll) {
+      e.preventDefault()
+    }
+  }
+
   componentDidMount() {
     document.body.addEventListener('wheel', this.handleWheel)
+    document.body.addEventListener('keydown', this.handleKeyDown)
   }
 
   componentWillUnmount() {
     document.body.removeEventListener('wheel', this.handleWheel);
+    document.body.removeEventListener('keydown', this.handleKeyDown);
   }
 
   render() {

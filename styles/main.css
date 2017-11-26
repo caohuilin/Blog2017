@@ -34,6 +34,7 @@
             cursor: default;
             user-select: none;
             transition: 'background' ease 0.05s;
+            cursor: pointer;
         }
         .item-0 {
             z-index: 3;
@@ -92,6 +93,12 @@
             font-size: 14px;
             text-indent: 2rem;
             line-height: 30px;
+            height: 90px;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
         }
         .information {
             display: flex;
@@ -100,6 +107,12 @@
             color: #c3c3c3;
             .iconfont {
                 color: red;
+                cursor: pointer;
+            }
+            .like {
+              &:hover {
+                transform: scale(1.5);
+              }
             }
         }
     }

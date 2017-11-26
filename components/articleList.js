@@ -70,6 +70,10 @@ class Article extends React.Component {
               js中数据类型方面应该注意的一些问题
               js中数据类型方面应该注意的一些问题
               js中数据类型方面应该注意的一些问题
+              js中数据类型方面应该注意的一些问题
+              js中数据类型方面应该注意的一些问题
+              js中数据类型方面应该注意的一些问题
+              js中数据类型方面应该注意的一些问题
             </div>
             <div className={`information ${blurClass}`}>
               <div className="like">
