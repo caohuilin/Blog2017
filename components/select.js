@@ -115,7 +115,7 @@ class Select extends React.Component {
                         onMouseOver={this.showMenu}
                         onClick={this.handleClick.bind(null, item.id)}
                       >
-                        <span>{item.value}</span>
+                        <span><a>{item.value}</a></span>
                         {k === 0 && (
                           <i
                             className={classnames({

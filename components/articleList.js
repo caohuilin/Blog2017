@@ -46,7 +46,7 @@ class Article extends React.Component {
                 <li key={i}>
                   <Link route='article' params={{ id: item.id, path: item.path }}>
                     <h3 className={`title ${textShadowClass}`}>
-                      {item.title}
+                      <a>{item.title}</a>
                       <span />
                     </h3>
                   </Link>
