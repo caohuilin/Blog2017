@@ -29,7 +29,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <Provider store={this.store}>
-        <Layout>
+        <Layout title="caohuilin's blog">
           <style dangerouslySetInnerHTML={{ __html: style }} />
           <Select />
           <ArticleList />
