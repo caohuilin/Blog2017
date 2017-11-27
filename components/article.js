@@ -17,6 +17,18 @@ class Article extends React.Component {
       width: 0,
     }
   }
+  getCurrentId = id => {
+    const { currentMenu } = this.props.store
+    const currentList = articleList.filter(item => currentMenu === 2 || item.tag === currentMenu)
+    let currentId = 0
+    currentList.map((item, i) => {
+      if (item.id === id) {
+        currentId = i
+      }
+      return null
+    })
+    return currentId
+  }
   likeArticle = id => {
     const likeArticleList = window ? window.localStorage.getItem('likeArticleList') : null
     let list =  likeArticleList ? JSON.parse(likeArticleList) : []
@@ -41,18 +53,23 @@ class Article extends React.Component {
   }
   render() {
     const { likeArticleList } = this.props.store
-    const id = this.props.id
+    const id = +this.props.id
+    const currentId = this.getCurrentId(id)
     const article = articleList[articleList.length - id - 1]
-    const k = Math.floor(id / 2)
-    const top = `${152 + 250 * k}px`
+    const k = Math.floor(currentId / 2)
+    const top = `${392 + 250 * k}px`
     const width = this.state.width / 2
+    const left = currentId % 2 ? '50%' : '60px'
+    const transformX = currentId % 2 ? `-${width}px` : `50% - ${width}px`
     const translateStyle = this.state.ready
       ? {
-          transform: `translate(calc(50% - ${width}px), -${152 + 250 * k}px)`,
-          top: top
+          transform: `translate(calc(${transformX}), -${392 + 250 * k}px)`,
+          top: top,
+          left: left
         }
       : {
-          top: top
+          top: top,
+          left: left
         }
     const displayStyle = this.state.ready
       ? {
