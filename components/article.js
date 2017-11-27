@@ -19,8 +19,12 @@ class Article extends React.Component {
   }
   likeArticle = id => {
     const likeArticleList = window ? window.localStorage.getItem('likeArticleList') : null
-    const list = likeArticleList ? JSON.parse(likeArticleList) : []
-    list.push(id)
+    let list =  likeArticleList ? JSON.parse(likeArticleList) : []
+    if (list.indexOf(id) !== -1) {
+      list = list.filter(item => item !== id)
+    } else {
+      list.push(id)
+    }
     localStorage.setItem('likeArticleList', JSON.stringify(list))
     this.props.store.setLikeArticleList(list)
   }

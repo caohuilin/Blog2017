@@ -11,14 +11,18 @@ import articleList from '../static/constant/articleList'
 @observer
 class Article extends React.Component {
   likeArticle = (id) => {
-    const likeArticleList = window ? window.localStorage.getItem('likeArticleList') : null
-    const list =  likeArticleList ? JSON.parse(likeArticleList) : []
-    list.push(id)
+    const likeArticleList = window.localStorage.getItem('likeArticleList')
+    let list =  likeArticleList ? JSON.parse(likeArticleList) : []
+    if (list.indexOf(id) !== -1) {
+      list = list.filter(item => item !== id)
+    } else {
+      list.push(id)
+    }
     localStorage.setItem('likeArticleList', JSON.stringify(list))
     this.props.store.setLikeArticleList(list)
   }
   componentDidMount () {
-    const likeArticleList = window ? window.localStorage.getItem('likeArticleList') : null
+    const likeArticleList = window.localStorage.getItem('likeArticleList')
     const list =  likeArticleList ? JSON.parse(likeArticleList) : []
     this.props.store.setLikeArticleList(list)
   }

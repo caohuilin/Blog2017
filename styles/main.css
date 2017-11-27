@@ -107,9 +107,7 @@
             color: #c3c3c3;
             .iconfont {
                 cursor: pointer;
-                &:hover {
-                    color: red;
-                }
+                user-select: none;
             }
             .like {
                 &:hover {
@@ -222,9 +220,7 @@
         transition: all 2s ease 1s;
         .iconfont {
             cursor: pointer;
-            &:hover {
-                color: red;
-            }
+            user-select: none;
         }
         .like {
             &:hover {
