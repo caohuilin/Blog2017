@@ -70,6 +70,11 @@ export default class Layout extends React.Component {
                       <a className="nav-link">Resume</a>
                     </Link>
                   </li>
+                  <li style={blurStyle}>
+                    <Link href="https://github.com/caohuilin">
+                      <a className="nav-link">GitHub</a>
+                    </Link>
+                  </li>
                 </ul>
               </nav>
             </header>

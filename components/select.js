@@ -4,37 +4,8 @@ import classnames from 'classnames';
 import { Motion, spring } from 'react-motion';
 import { inject, observer } from 'mobx-react';
 import * as _ from 'lodash';
+import selects from '../static/constant/selects';
 
-const selects = [
-  {
-    id: 0,
-    value: 'HTML'
-  },
-  {
-    id: 1,
-    value: 'CSS'
-  },
-  {
-    id: 2,
-    value: 'ALL'
-  },
-  {
-    id: 3,
-    value: 'JavaScript'
-  },
-  {
-    id: 4,
-    value: 'HTTP'
-  },
-  {
-    id: 5,
-    value: 'React'
-  },
-  {
-    id: 6,
-    value: '其他'
-  }
-];
 @inject('store')
 @observer
 class Select extends React.Component {
