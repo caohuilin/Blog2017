@@ -90,7 +90,7 @@ class Select extends React.Component {
               k = k < -2 && t1 >= 0 ? t1 : k
               const height = 50 - Math.abs(k) * 10
               const fontSize = 30 - Math.abs(k) * 5
-              const opacity = (showSelectMenu && k < 2) || k === 0 ? 1 - Math.abs(k) * 0.2 : 0
+              const opacity = (showSelectMenu && k <= 2) || k === 0 ? 1 - Math.abs(k) * 0.2 : 0
               const translate = showSelectMenu ? this.getPosition(k) : 0
               const filter = Math.abs(k) / 5.0
               const background = showSelectMenu ? '#ffffff' : 'transparent'
