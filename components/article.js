@@ -81,7 +81,7 @@ class Article extends React.Component {
               &#xe60b;
             </i>
           </div>
-          <div className="date">{article.date}</div>
+          <div className="date"><i className="iconfont">&#xe61b;</i>{article.date}</div>
         </div>
       </div>
     )

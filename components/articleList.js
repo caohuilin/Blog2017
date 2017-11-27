@@ -56,7 +56,7 @@ class Article extends React.Component {
                         red: likeArticleList.indexOf(item.id) !== -1
                       })} onClick={this.likeArticle.bind(null, item.id)}>&#xe60b;</i>
                     </div>
-                    <div className="date">{item.date}</div>
+                    <div className="date"><i className="iconfont">&#xe61b;</i>{item.date}</div>
                   </div>
                 </li>
               )
