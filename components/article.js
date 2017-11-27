@@ -15,7 +15,6 @@ class Article extends React.Component {
     this.state = {
       ready: false,
       width: 0,
-      pageWidth: 0
     }
   }
   likeArticle = id => {
@@ -34,25 +33,21 @@ class Article extends React.Component {
     }, 100)
     const width = document.getElementsByClassName('move-title-span')[0]
       .offsetWidth
-    const pageWidth = document.getElementsByClassName('page')[0].offsetWidth
-    this.setState({ width, pageWidth })
+    this.setState({ width })
   }
   render() {
     const { likeArticleList } = this.props.store
     const id = this.props.id
     const article = articleList[articleList.length - id - 1]
     const k = Math.floor(id / 2)
-    const left = id % 2 ? 'calc(60px + 50%)' : '60px'
     const top = `${152 + 250 * k}px`
-    const width = this.state.width + (id % 2 ? this.state.pageWidth / 2 : 0)
+    const width = this.state.width / 2
     const translateStyle = this.state.ready
       ? {
           transform: `translate(calc(50% - ${width}px), -${152 + 250 * k}px)`,
-          left: left,
           top: top
         }
       : {
-          left: left,
           top: top
         }
     const displayStyle = this.state.ready
