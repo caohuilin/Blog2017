@@ -2,9 +2,9 @@
   "name": "blog2017",
   "version": "1.0.0",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next dev",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production next start"
   },
   "author": "caohuilin <caohuilin9588@foxmail.com>",
   "dependencies": {
