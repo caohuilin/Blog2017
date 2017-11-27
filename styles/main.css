@@ -59,6 +59,14 @@
         filter: blur(0px);
         transition: 0.1s filter linear;
     }
+    .shadow {
+        text-shadow: 0 0 5px rgba(94, 94, 94, 0.5);
+        transition: 0.3s filter linear;
+    }
+    .unshadow {
+        text-shadow: none;
+        transition: 0.1s filter linear;
+    }
     >ul {
         display: flex;
         justify-content: space-between;
@@ -114,9 +122,9 @@
                     transform: scale(1.5);
                 }
                 .iconfont {
-                  cursor: pointer;
-                  user-select: none;
-              }
+                    cursor: pointer;
+                    user-select: none;
+                }
             }
         }
     }
@@ -227,15 +235,15 @@
                 transform: scale(1.5);
             }
             .iconfont {
-              cursor: pointer;
-              user-select: none;
-          }
+                cursor: pointer;
+                user-select: none;
+            }
         }
         .date {
-          .iconfont {
-            user-select: none;
-            margin-right: 10px;
-        }
+            .iconfont {
+                user-select: none;
+                margin-right: 10px;
+            }
         }
     }
 }

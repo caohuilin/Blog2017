@@ -32,6 +32,10 @@ class Article extends React.Component {
       blur: showSelectMenu,
       unblur: !showSelectMenu
     })
+    const textShadowClass = classnames({
+      shadow: showSelectMenu,
+      unshadow: !showSelectMenu
+    })
     return (
       <nav className="content">
         <ul>
@@ -41,7 +45,7 @@ class Article extends React.Component {
               return (
                 <li key={i}>
                   <Link route='article' params={{ id: item.id, path: item.path }}>
-                    <h3 className={`title ${blurClass}`}>
+                    <h3 className={`title ${textShadowClass}`}>
                       {item.title}
                       <span />
                     </h3>
