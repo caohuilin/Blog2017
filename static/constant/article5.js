@@ -73,6 +73,7 @@ parseInt("08",10)  //8
 - Number.NEGATIVE_INFINITY  //负无穷大
 - Number.MAX_VALUE          //最大值
 - Number.MIN_VALUE          //最小值
+
 ### String
 #### 1. 字符表示
 在过去的JavaScript中，没有char这样的字符数据类型，表示单个字符也只能使用长度为1的字符串来表示。
@@ -92,7 +93,8 @@ parseInt("08",10)  //8
    0或NaN  => false   其他数值 => true
    "" => false        非空字符串 => true
    空值(null)或者未定义的值(undefined) => false  非空对象(!null)、数组(包括空数组)、函数（包括空函数） => true  换言之：除null以外的对象类型转换都为true
-### Null和Undefined
+
+   ### Null和Undefined
 #### 1. Null类型只有一个值null，Undefined类型也只有一个值undefined。
   null表示为空或者不存在的对象引用。当定义了一个变量但没有给它赋值，它的值就是undefined。
 #### 2 .typeof的坑
