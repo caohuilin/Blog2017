@@ -135,6 +135,7 @@
         width: 100%;
         text-align: left;
         transition: all 2s ease;
+        cursor: default;
     }
     .content {
         opacity: 0;
