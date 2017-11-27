@@ -64,7 +64,7 @@ header {
     line-height: 50px;
     display: flex;
     justify-content: space-between;
-    padding: 50px;
+    padding: 60px;
     nav {
       ul {
           display: flex;
