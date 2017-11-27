@@ -58,7 +58,7 @@ export default class Layout extends React.Component {
           <div className="page">
             <header>
               <div id="logo" style={blurStyle}>
-                =CHL
+                <Link href="/">=CHL</Link>
               </div>
               <nav>
                 <ul>
