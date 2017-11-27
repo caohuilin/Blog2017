@@ -65,6 +65,9 @@ class Select extends React.Component {
       }
     }
   }
+  handleClick = id => {
+    this.props.store.changeCurrentMenu(id)
+  }
   throttledScroll = _.throttle(this.handleScroll, 500, { trailing: false })
   throttledKeyDown = _.throttle(this.handleKeyDown, 100, { trailing: false })
   componentDidMount() {
@@ -110,6 +113,7 @@ class Select extends React.Component {
                         className={`item-${Math.abs(k)}`}
                         style={style}
                         onMouseOver={this.showMenu}
+                        onClick={this.handleClick.bind(null, item.id)}
                       >
                         <span>{item.value}</span>
                         {k === 0 && (
