@@ -1,4 +1,4 @@
-import Article0 from './article0';
+import Article0 from './article0.md';
 import Article1 from './article1';
 import Article2 from './article2';
 import Article3 from './article3';

@@ -12,6 +12,12 @@
     ]
   ],
   "plugins": [
-    "transform-decorators-legacy"
+    "transform-decorators-legacy",
+    [
+      "wrap-in-js",
+      {
+        "extensions": ["md$"]
+      }
+    ]
   ]
 }

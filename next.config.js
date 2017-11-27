@@ -7,11 +7,16 @@ module.exports = {
     // Because, it support react hot loading and so on.
     config.module.rules.push(
       {
-        test: /\.(css|scss)/,
+        test: /\.(css|scss|md)/,
         loader: 'emit-file-loader',
         options: {
           name: 'dist/[path][name].[ext]'
         }
+      }
+    ,
+      {
+        test: /\.md$/,
+        use: ['raw-loader']
       }
     ,
       {
