@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Link from 'next/link'
+import { Link, Router } from '../routes'
 import classnames from 'classnames'
 import { Motion, spring } from 'react-motion'
 import { inject, observer } from 'mobx-react'
@@ -36,7 +36,7 @@ class Article extends React.Component {
             .map((item, i) => {
               return (
                 <li key={i}>
-                  <Link href={{ pathname: '/article', query: { id: item.id } }}>
+                  <Link route='article' params={{ id: item.id, path: item.path }}>
                     <h3 className={`title ${blurClass}`}>
                       {item.title}
                       <span />

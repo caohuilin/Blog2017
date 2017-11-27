@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Hex-monograms";
-    src: url('../static/fonts/Hex-monograms.otf') format('otf'), url('../static/fonts/Hex-monograms.ttf') format('truetype'), url('../static/fonts/Hex-ornate.otf') format('otf'), url('../static/fonts/Hex-ornate.ttf') format('truetype');
+    src: url('/static/fonts/Hex-monograms.otf') format('otf'), url('/static/fonts/Hex-monograms.ttf') format('truetype'), url('/static/fonts/Hex-ornate.otf') format('otf'), url('/static/fonts/Hex-ornate.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
