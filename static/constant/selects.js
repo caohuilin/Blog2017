@@ -31,4 +31,4 @@ export default [
     id: 7,
     value: 'Project'
   }
-];
+]

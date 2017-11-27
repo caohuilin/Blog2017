@@ -1,9 +1,9 @@
-import Head from 'next/head';
-import React from 'react';
-import { inject, observer } from 'mobx-react';
-import Link from './link';
-import reset from '../styles/reset.css';
-import layout from '../styles/layout.css';
+import Head from 'next/head'
+import React from 'react'
+import { inject, observer } from 'mobx-react'
+import Link from './link'
+import reset from '../styles/reset.css'
+import layout from '../styles/layout.css'
 
 @inject('store')
 @observer
@@ -26,13 +26,13 @@ export default class Layout extends React.Component {
   }
 
   componentWillUnmount() {
-    document.body.removeEventListener('wheel', this.handleWheel);
-    document.body.removeEventListener('keydown', this.handleKeyDown);
+    document.body.removeEventListener('wheel', this.handleWheel)
+    document.body.removeEventListener('keydown', this.handleKeyDown)
   }
 
   render() {
-    const { title, children } = this.props;
-    const { showSelectMenu } = this.props.store;
+    const { title, children } = this.props
+    const { showSelectMenu } = this.props.store
     const blurStyle = showSelectMenu
     ? {
         filter: `blur(10px)`,
@@ -41,7 +41,7 @@ export default class Layout extends React.Component {
     : {
       filter: `blur(0px)`,
       transition: `0.3s filter linear`
-    };
+    }
     return (
       <div>
         <Head>
@@ -82,6 +82,6 @@ export default class Layout extends React.Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }

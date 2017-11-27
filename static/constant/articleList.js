@@ -1,10 +1,10 @@
-import Article0 from './article0';
-import Article1 from './article1';
-import Article2 from './article2';
-import Article3 from './article3';
-import Article4 from './article4';
-import Article5 from './article5';
-import Article6 from './article6';
+import Article0 from './article0'
+import Article1 from './article1'
+import Article2 from './article2'
+import Article3 from './article3'
+import Article4 from './article4'
+import Article5 from './article5'
+import Article6 from './article6'
 export default [
   {
       id:0,
@@ -62,4 +62,4 @@ export default [
       description:"2016年阿里实习生招聘笔试题",
       content:Article6
   }
-].reverse();
+].reverse()

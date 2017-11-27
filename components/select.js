@@ -1,10 +1,10 @@
-import * as React from 'react';
-import Link from 'next/link';
-import classnames from 'classnames';
-import { Motion, spring } from 'react-motion';
-import { inject, observer } from 'mobx-react';
-import * as _ from 'lodash';
-import selects from '../static/constant/selects';
+import * as React from 'react'
+import Link from 'next/link'
+import classnames from 'classnames'
+import { Motion, spring } from 'react-motion'
+import { inject, observer } from 'mobx-react'
+import * as _ from 'lodash'
+import selects from '../static/constant/selects'
 
 @inject('store')
 @observer
@@ -12,69 +12,69 @@ class Select extends React.Component {
   getPosition = id => {
     switch (id) {
       case 0:
-        return 0;
+        return 0
       case 1:
-        return 50;
+        return 50
       case 2:
-        return 90;
+        return 90
       case -1:
-        return -40;
+        return -40
       case -2:
-        return -70;
+        return -70
       default:
-        return 0;
+        return 0
     }
-  };
+  }
   showMenu = () => {
-    this.props.store.showMenu();
-  };
+    this.props.store.showMenu()
+  }
 
   hideMenu = () => {
-    this.props.store.hideMenu();
-  };
+    this.props.store.hideMenu()
+  }
   handleScroll = e => {
-    e.preventDefault();
-    e.stopPropagation();
-    const y = e.deltaY;
-    const currentMenu = this.props.store.currentMenu;
-    let nextMenu = currentMenu;
+    e.preventDefault()
+    e.stopPropagation()
+    const y = e.deltaY
+    const currentMenu = this.props.store.currentMenu
+    let nextMenu = currentMenu
     if (y > 100) {
-      nextMenu = nextMenu + 1 === selects.length ? 0 : nextMenu + 1;
+      nextMenu = nextMenu + 1 === selects.length ? 0 : nextMenu + 1
     }
     if (y < 100) {
-      nextMenu = nextMenu - 1 === -1 ? selects.length - 1 : nextMenu - 1;
+      nextMenu = nextMenu - 1 === -1 ? selects.length - 1 : nextMenu - 1
     }
     if (nextMenu !== currentMenu) {
-      this.props.store.changeCurrentMenu(nextMenu);
+      this.props.store.changeCurrentMenu(nextMenu)
     }
-  };
+  }
   handleKeyDown = e => {
-    const code = e.keyCode;
-    const currentMenu = this.props.store.currentMenu;
-    const showSelectMenu = this.props.store.showSelectMenu;
-    let nextMenu = currentMenu;
+    const code = e.keyCode
+    const currentMenu = this.props.store.currentMenu
+    const showSelectMenu = this.props.store.showSelectMenu
+    let nextMenu = currentMenu
     if (showSelectMenu) {
       if (code === 38) {
-        nextMenu = nextMenu + 1 === selects.length ? 0 : nextMenu + 1;
+        nextMenu = nextMenu + 1 === selects.length ? 0 : nextMenu + 1
       }
       if (code === 40) {
-        nextMenu = nextMenu - 1 === -1 ? selects.length - 1 : nextMenu - 1;
+        nextMenu = nextMenu - 1 === -1 ? selects.length - 1 : nextMenu - 1
       }
       if (nextMenu !== currentMenu) {
-        this.props.store.changeCurrentMenu(nextMenu);
+        this.props.store.changeCurrentMenu(nextMenu)
       }
     }
-  };
-  throttledScroll = _.throttle(this.handleScroll, 500, { trailing: false });
-  throttledKeyDown = _.throttle(this.handleKeyDown, 100, { trailing: false });
+  }
+  throttledScroll = _.throttle(this.handleScroll, 500, { trailing: false })
+  throttledKeyDown = _.throttle(this.handleKeyDown, 100, { trailing: false })
   componentDidMount() {
-    window.addEventListener('keydown', this.throttledKeyDown);
+    if (window) window.addEventListener('keydown', this.throttledKeyDown)
   }
   componentWillUnmount() {
-    window.removeEventListener('keydown', this.throttledKeyDown);
+    if (window) window.removeEventListener('keydown', this.throttledKeyDown)
   }
   render() {
-    const { showSelectMenu, currentMenu } = this.props.store;
+    const { showSelectMenu, currentMenu } = this.props.store
     return (
       <div className="menu">
         <div className="selected">
@@ -103,7 +103,7 @@ class Select extends React.Component {
                       WebkitTransform: `translateY(${x}px)`,
                       msTransform: `translateY(${x}px)`,
                       textShadow: `0 0 ${filter}px rgba(94, 94, 94, 1)`
-                    };
+                    }
                     return (
                       <li
                         key={item.id}
@@ -124,17 +124,17 @@ class Select extends React.Component {
                           </i>
                         )}
                       </li>
-                    );
+                    )
                   }}
                 </Motion>
-              );
+              )
             })}
           </ul>
         </div>
         <span className="line" />
       </div>
-    );
+    )
   }
 }
 
-export default Select;
+export default Select
