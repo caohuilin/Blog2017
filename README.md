@@ -1,25 +1,38 @@
-# Blog2017
+# 个人博客 v2017
 
-- [x] 居中
-- [x] 文章标题不能点击
-- [x] 收藏可以取消
-- [x] Resume 新页面打开
-- [x] 标签支持点击
-- [x] 标签下面的线远一点
-- [x] 构建有问题
-- [x] title
-- [x] 边距没对齐
-- [x] 红色换一下
-- [x] 加上日期图标
-- [x] 文章内容也标题动画方向问题
-- [x] 选择tag的时候，文章标题保证可以看清
-- [x] tag、文章标题这些超链接的html里面包含A标签
-- 构建的时候css没有加前缀
-- [x] 路由问题
-- [x] icon 点击返回首页、不可选中
-- [x] 标签鼠标快速移过时不触发筛选
-- 代码高亮
+> 寂寞空虚冷的时候不妨来总结总结近期又遇到了什么好玩的东西
 
-- js -> md
-- ts 报错
-- 导出html
+## 技术
+
+- next
+- react
+- mobx
+- postcss
+
+## 项目安装部署
+
+### Install
+
+```bash
+yarn install
+```
+
+### Dev Serve
+
+It's served in http://localhost:3000.
+
+```bash
+yarn run dev
+```
+
+### Build
+
+```bash
+yarn run build
+```
+
+### Serive Serve
+
+```bash
+yarn run start
+```
