@@ -58,9 +58,9 @@ class Article extends React.Component {
     const article = articleList[articleList.length - id - 1]
     const k = Math.floor(currentId / 2)
     const top = `${392 + 250 * k}px`
-    const width = this.state.width / 2
+    const width = this.state.width
     const left = currentId % 2 ? '50%' : '60px'
-    const transformX = currentId % 2 ? `-${width}px` : `50% - ${width}px`
+    const transformX = currentId % 2 ? `-${width / 2}px` : `50% - ${width}px`
     const translateStyle = this.state.ready
       ? {
           transform: `translate(calc(${transformX}), -${392 + 250 * k}px)`,

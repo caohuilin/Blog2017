@@ -1,12 +1,12 @@
-import Article0 from './article0.md';
-import Article1 from './article1';
-import Article2 from './article2';
-import Article3 from './article3';
-import Article4 from './article4';
-import Article5 from './article5';
-import Article6 from './article6';
-import Article7 from './article7';
-import Article8 from './article8';
+import Article0 from './article0.md'
+import Article1 from './article1.md'
+import Article2 from './article2.md'
+import Article3 from './article3.md'
+import Article4 from './article4.md'
+import Article5 from './article5.md'
+import Article6 from './article6.md'
+import Article7 from './article7.md'
+import Article8 from './article8.md'
 /**
  * @type {[{id:number,title:string,tag:number,date:string,path:string,description:string,content:string}]}
  */
@@ -100,6 +100,6 @@ import Article8 from './article8';
       'HTTP状态码（HTTP Status Code）在前后端合作中发挥着重要的作用，前端通过HTTP状态码可以获取到服务器处理相关请求的信息，从而向用户显示对应的提示或者操作。最近在项目中对状态码进行了前后端的重构，在这里做个汇总，方便以后查阅',
     content: Article8
   }
-];
+]
 
 export default articleList.reverse()

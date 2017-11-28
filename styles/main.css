@@ -168,25 +168,25 @@
             padding: 0;
         }
         h1 {
-            font-size: 2.5em;
+            font-size: 2em;
             border-bottom: 1px solid #ddd;
         }
         h2 {
-            font-size: 2em;
+            font-size: 1.5em;
             border-bottom: 1px solid #eee;
         }
         h3 {
-            font-size: 1.5em;
-        }
-        h4 {
             font-size: 1.2em;
         }
-        h5 {
+        h4 {
             font-size: 1em;
+        }
+        h5 {
+            font-size: 0.75em;
         }
         h6 {
             color: #777;
-            font-size: 1em;
+            font-size: 0.75em;
         }
         pre {
             display: block;
@@ -210,7 +210,7 @@
             border-radius: 0;
             line-height: 26px;
         }
-        ul {
+        ul, ol {
             display: block;
             margin-left: 2rem;
         }
@@ -225,7 +225,7 @@
     .information {
         opacity: 0;
         display: flex;
-        padding: 20px 60px 60px 100px;
+        padding: 20px 60px 60px 60px;
         justify-content: space-between;
         margin-top: 20px;
         color: #333333;

@@ -9,6 +9,7 @@ import selects from '../static/constant/selects'
 @inject('store')
 @observer
 class Select extends React.Component {
+  timer = null
   getPosition = id => {
     switch (id) {
       case 0:
@@ -31,6 +32,13 @@ class Select extends React.Component {
 
   hideMenu = () => {
     this.props.store.hideMenu()
+  }
+
+  handleMouseOver = () => {
+    this.timer = setTimeout(this.showMenu, 500)
+  }
+  handleMouseOut = () => {
+    if (this.timer) clearTimeout(this.timer)
   }
   handleScroll = e => {
     e.preventDefault()
@@ -112,7 +120,8 @@ class Select extends React.Component {
                         key={item.id}
                         className={`item-${Math.abs(k)}`}
                         style={style}
-                        onMouseOver={this.showMenu}
+                        onMouseOver={this.handleMouseOver}
+                        onMouseOut={this.handleMouseOut}
                         onClick={this.handleClick.bind(null, item.id)}
                       >
                         <span><a>{item.value}</a></span>
