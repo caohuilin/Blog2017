@@ -84,12 +84,12 @@ yarn run start
 
 ## Todos
 
-### html
+### HTML
 
 - [ ] 响应式布局在html方面的实现
 - [ ]  audit关于html方面的测试注意事项
 
-### css
+### CSS
 
 - [ ] 元素等比例缩放的实现
 - [ ] BFC
@@ -100,7 +100,7 @@ yarn run start
 - [ ] css实现左边长度固定，右边随浏览器变化
 - [ ] 有关文字的一些css属性(http://www.daqianduan.com/6179.html)
 
-### js
+### JavaScript
 
 - [ ] es6新特性
 - let const
@@ -123,20 +123,20 @@ yarn run start
 - [ ] 重绘和回流
 - [ ] 防抖和节流
 
-### http
+### HTTP
 
-- [ ] http原理
-- [ ] http请求方法
-- [ ] http状态码
-- [ ] http2和http1的区别
-- [ ] https实现了什么
-- [ ] http缓存
-- [ ] http跨域
-- [ ] 前端api请求方式整理
+- [ ] HTTP原理
+- [x] HTTP请求方法
+- [x] HTTP状态码
+- [x] HTTP2和HTTP1的区别
+- [ ] HTTPS实现了什么
+- [x] HTTP缓存
+- [ ] HTTP跨域
+- [ ] 前端API请求方式整理
 
-### react
+### React
 
-- [ ] react生命周期及作用
+- [ ] React生命周期及作用
 - [ ] redux数据流
 - [ ] redux-saga和redux-thunk的实现区别和注意事项
 
