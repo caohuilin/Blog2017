@@ -7,6 +7,9 @@ import Article5 from './article5.md'
 import Article6 from './article6.md'
 import Article7 from './article7.md'
 import Article8 from './article8.md'
+import Article9 from './article9.md'
+import Article10 from './article10.md'
+import Article11 from './article11.md'
 /**
  * @type {[{id:number,title:string,tag:number,date:string,path:string,description:string,content:string}]}
  */
@@ -33,7 +36,7 @@ import Article8 from './article8.md'
   },
   {
     id: 2,
-    title: ' 随笔  ----前端路的酸甜苦辣',
+    title: '随笔 ----前端路的酸甜苦辣',
     tag: 6,
     date: '2016-03-25',
     path: 'essay-front-road-ups-and-downs',
@@ -94,11 +97,37 @@ import Article8 from './article8.md'
     id: 8,
     title: 'HTTP状态码汇总',
     tag: 4,
-    date: '2016-07-20',
+    date: '2017-07-20',
     path: 'http-status-code-summary',
-    description:
-      'HTTP状态码（HTTP Status Code）在前后端合作中发挥着重要的作用，前端通过HTTP状态码可以获取到服务器处理相关请求的信息，从而向用户显示对应的提示或者操作。最近在项目中对状态码进行了前后端的重构，在这里做个汇总，方便以后查阅',
+    description: 'HTTP状态码（HTTP Status Code）在前后端合作中发挥着重要的作用，前端通过HTTP状态码可以获取到服务器处理相关请求的信息，从而向用户显示对应的提示或者操作。最近在项目中对状态码进行了前后端的重构，在这里做个汇总，方便以后查阅',
     content: Article8
+  },
+  {
+    id: 9,
+    title: 'HTTP请求方法汇总',
+    tag: 4,
+    date: '2017-09-05',
+    path: 'http-request-method-summary',
+    description: 'HTTP客户端会根据需要构建合适的HTTP请求方法，而HTTP服务器会根据不同的HTTP请求方法做出不同的响应。',
+    content: Article9
+  },
+  {
+    id: 10,
+    title: 'HTTP缓存相关头部',
+    tag: 4,
+    date: '2017-09-30',
+    path: 'http-cache-related-head',
+    description: 'HTTP缓存是web应用优化的一个重要环节，了解HTTP缓存机制对于web应用的开发至关重要。',
+    content: Article10
+  },
+  {
+    id: 11,
+    title: 'HTTP 2.0 特点',
+    tag: 4,
+    date: '2017-10-20',
+    path: 'the-http-2-features',
+    description: 'HTTP2.0的诞生使得请求访问更加高效，为我们进一步优化应用和提升性能提供了全新的机会！',
+    content: Article11
   }
 ]
 

@@ -1,3 +1,5 @@
+# 搞怪的JavaScript数据类型
+
 JavaScript中的五种基本数据类型：Number、String、Boolean、Null、Undefined。
 
 ## Number
