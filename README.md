@@ -33,18 +33,18 @@ https://blog2017.hi-hi.cn/
 - [Linux内核编译][12]
 
 
-  [1]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/articl11.md
-  [2]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/articl10.md
-  [3]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/articl9.md
-  [4]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/articl8.md
-  [5]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/articl7.md
-  [6]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/articl6.md
-  [7]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/articl5.md
-  [8]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/articl4.md
-  [9]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/articl3.md
-  [10]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/articl2.md
-  [11]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/articl1.md
-  [12]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/articl0.md
+  [1]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article11.md
+  [2]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article10.md
+  [3]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article9.md
+  [4]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article8.md
+  [5]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article7.md
+  [6]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article6.md
+  [7]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article5.md
+  [8]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article4.md
+  [9]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article3.md
+  [10]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article2.md
+  [11]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article1.md
+  [12]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article0.md
   
 
 ## 技术
