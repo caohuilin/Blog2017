@@ -80,6 +80,17 @@ header {
           .home-link {
               color: #5e5e5e;
           }
+          @media screen and (max-width: 420px) {
+            .nav-link {
+              display: none;
+            }
+            .home-link {
+              display: block;
+            }
+            li + li {
+              margin: 0;
+            }
+          }
       }
   }
 }

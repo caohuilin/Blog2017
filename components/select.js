@@ -10,6 +10,7 @@ import selects from '../static/constant/selects'
 @observer
 class Select extends React.Component {
   timer = null
+  timer2 = null
   getPosition = id => {
     switch (id) {
       case 0:
@@ -31,14 +32,16 @@ class Select extends React.Component {
   }
 
   hideMenu = () => {
-    this.props.store.hideMenu()
+    this.timer2 = setTimeout(this.props.store.hideMenu, 500)
   }
 
   handleMouseOver = () => {
+    if (this.timer2) clearTimeout(this.timer2)
     this.timer = setTimeout(this.showMenu, 500)
   }
   handleMouseOut = () => {
     if (this.timer) clearTimeout(this.timer)
+    this.hideMenu()
   }
   handleScroll = e => {
     e.preventDefault()
@@ -83,13 +86,15 @@ class Select extends React.Component {
   }
   componentWillUnmount() {
     if (window) window.removeEventListener('keydown', this.throttledKeyDown)
+    if (this.timer) clearTimeout(this.timer)
+    if (this.timer2) clearTimeout(this.timer2)
   }
   render() {
     const { showSelectMenu, currentMenu } = this.props.store
     return (
       <div className="menu">
         <div className="selected">
-          <ul onMouseOut={this.hideMenu} onWheel={this.throttledScroll}>
+          <ul onWheel={this.throttledScroll}>
             {selects.map(item => {
               let k = item.id - currentMenu
               const t1 = selects.length + item.id - currentMenu

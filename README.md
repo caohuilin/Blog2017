@@ -45,7 +45,7 @@ https://blog2017.hi-hi.cn/
   [10]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article2.md
   [11]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article1.md
   [12]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article0.md
-  
+
 
 ## 技术
 
@@ -117,11 +117,12 @@ yarn run start
 - [ ] 上下文环境和作用域的区别
 - [ ] 常用的正则表达式的整理
 - [ ] 设计模式的整理
-- [ ] setTimeout和setInterval
+- [ ] setTimeout、setInterval和process.nextTick
 - [ ] 手机端点击事件的延迟问题和解决方案
 - [ ] 手势事件的优化及实现
 - [ ] 重绘和回流
 - [ ] 防抖和节流
+- [ ] JavaScript函数运行机制和异步处理方式
 
 ### HTTP
 

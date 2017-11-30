@@ -127,6 +127,13 @@
                 }
             }
         }
+        @media screen and (max-width: 700px){
+          flex-direction: column;
+          li {
+            width: 100%;
+            padding: 0 !important;
+          }
+        }
     }
 }
 
@@ -139,6 +146,10 @@
         margin-bottom: 20px;
         cursor: pointer;
         transition: all 1s ease;
+        @media screen and (max-width: 420px) {
+          text-align: center !important;
+          left: 0 !important;
+        }
     }
     .move-title {
         position: absolute;
