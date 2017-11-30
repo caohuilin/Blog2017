@@ -15,6 +15,7 @@ class Article extends React.Component {
     this.state = {
       ready: false,
       width: 0,
+      pageWidth: 0
     }
   }
   getCurrentId = id => {
@@ -49,7 +50,9 @@ class Article extends React.Component {
     }, 100)
     const width = document.getElementsByClassName('move-title-span')[0]
       .offsetWidth
-    this.setState({ width })
+    const pageWidth = document.getElementsByClassName('page')[0]
+      .offsetWidth
+    this.setState({ width, pageWidth })
   }
   render() {
     const { likeArticleList } = this.props.store
@@ -59,8 +62,9 @@ class Article extends React.Component {
     const k = Math.floor(currentId / 2)
     const top = `${392 + 250 * k}px`
     const width = this.state.width
+    const pageWidth = this.state.pageWidth
     const left = currentId % 2 ? '50%' : '60px'
-    const transformX = width < 420 ? 0 : (currentId % 2 ? `calc(-${width / 2}px)` : `calc(50% - ${width}px)`)
+    const transformX = pageWidth < 420 ? 0 : (currentId % 2 ? `calc(-${width / 2}px)` : `calc(50% - ${width}px)`)
     const translateStyle = this.state.ready
       ? {
           transform: `translate(${transformX}, -${392 + 250 * k}px)`,
