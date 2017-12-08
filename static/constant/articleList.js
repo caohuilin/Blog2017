@@ -10,6 +10,7 @@ import Article8 from './article8.md'
 import Article9 from './article9.md'
 import Article10 from './article10.md'
 import Article11 from './article11.md'
+import Article12 from './article12.md'
 /**
  * @type {[{id:number,title:string,tag:number,date:string,path:string,description:string,content:string}]}
  */
@@ -128,6 +129,15 @@ import Article11 from './article11.md'
     path: 'the-http-2-features',
     description: 'HTTP2.0的诞生使得请求访问更加高效，为我们进一步优化应用和提升性能提供了全新的机会！',
     content: Article11
+  },
+  {
+    id: 12,
+    title: 'BFC的秘密',
+    tag: 1,
+    date: '2017-11-10',
+    path: 'the-secret-of-bfc',
+    description: '听到BFC这个名字，你可能觉得陌生，但是作为天天写前端布局的程序猿来说，其实你无意中已经用了无数次了。今天我给大家介绍介绍，BFC到底是个什么玩意。',
+    content: Article12
   }
 ]
 
