@@ -8,43 +8,46 @@ https://blog2017.hi-hi.cn/
 
 ## 博客列表
 
-- [HTTP 2.0 特点][1]
+- [BFC的秘密][13]
 
-- [HTTP缓存相关头部][2]
+- [HTTP 2.0 特点][12]
 
-- [HTTP请求方法汇总][3]
+- [HTTP缓存相关头部][11]
 
-- [HTTP状态码汇总][4]
+- [HTTP请求方法汇总][10]
 
-- [贪吃蛇小游戏开发总结（1）][5]
+- [HTTP状态码汇总][9]
 
-- [谈谈阿里的前端笔试题][6]
+- [贪吃蛇小游戏开发总结（1）][8]
 
-- [搞怪的JavaScript数据类型][7]
+- [谈谈阿里的前端笔试题][7]
 
-- [对React的一些理解][8]
+- [搞怪的JavaScript数据类型][6]
 
-- [让人欢喜让人忧的CSS居中问题][9]
+- [对React的一些理解][5]
 
-- [随笔 ----前端路的酸甜苦辣][10]
+- [让人欢喜让人忧的CSS居中问题][4]
 
-- [Logbook开发总结（1）][11]
+- [随笔 ----前端路的酸甜苦辣][3]
 
-- [Linux内核编译][12]
+- [Logbook开发总结（1）][2]
+
+- [Linux内核编译][1]
 
 
-  [1]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article11.md
-  [2]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article10.md
-  [3]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article9.md
-  [4]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article8.md
-  [5]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article7.md
-  [6]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article6.md
-  [7]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article5.md
-  [8]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article4.md
-  [9]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article3.md
-  [10]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article2.md
-  [11]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article1.md
-  [12]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article0.md
+  [1]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article0.md
+  [2]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article1.md
+  [3]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article2.md
+  [4]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article3.md
+  [5]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article4.md
+  [6]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article5.md
+  [7]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article6.md
+  [8]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article7.md
+  [9]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article8.md
+  [10]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article9.md
+  [11]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article10.md
+  [12]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article11.md
+  [13]: https://blog2017.hi-hi.cn/article/12/the-secret-of-bfc
 
 
 ## 技术
