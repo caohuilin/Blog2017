@@ -95,7 +95,7 @@ yarn run start
 ### CSS
 
 - [ ] 元素等比例缩放的实现
-- [ ] BFC
+- [x] BFC
 - [ ] 浮动
 - [ ] flex布局
 - [ ] 响应式布局在css方面的实现
