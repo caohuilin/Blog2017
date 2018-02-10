@@ -10,5 +10,7 @@
   "search.exclude": {
     "**/node_modules": true,
     "**/bower_components": true
-  }
+  },
+  "prettier.semi": false,
+  "prettier.singleQuote": true
 }

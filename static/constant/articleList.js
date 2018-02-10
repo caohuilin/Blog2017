@@ -15,7 +15,7 @@ import Article13 from './article13.md'
 /**
  * @type {[{id:number,title:string,tag:number,date:string,path:string,description:string,content:string}]}
  */
- const articleList =  [
+const articleList = [
   {
     id: 0,
     title: 'Linux内核编译',
@@ -101,7 +101,8 @@ import Article13 from './article13.md'
     tag: 4,
     date: '2017-07-20',
     path: 'http-status-code-summary',
-    description: 'HTTP状态码（HTTP Status Code）在前后端合作中发挥着重要的作用，前端通过HTTP状态码可以获取到服务器处理相关请求的信息，从而向用户显示对应的提示或者操作。最近在项目中对状态码进行了前后端的重构，在这里做个汇总，方便以后查阅',
+    description:
+      'HTTP状态码（HTTP Status Code）在前后端合作中发挥着重要的作用，前端通过HTTP状态码可以获取到服务器处理相关请求的信息，从而向用户显示对应的提示或者操作。最近在项目中对状态码进行了前后端的重构，在这里做个汇总，方便以后查阅',
     content: Article8
   },
   {
@@ -110,7 +111,8 @@ import Article13 from './article13.md'
     tag: 4,
     date: '2017-09-05',
     path: 'http-request-method-summary',
-    description: 'HTTP客户端会根据需要构建合适的HTTP请求方法，而HTTP服务器会根据不同的HTTP请求方法做出不同的响应。',
+    description:
+      'HTTP客户端会根据需要构建合适的HTTP请求方法，而HTTP服务器会根据不同的HTTP请求方法做出不同的响应。',
     content: Article9
   },
   {
@@ -119,7 +121,8 @@ import Article13 from './article13.md'
     tag: 4,
     date: '2017-09-30',
     path: 'http-cache-related-head',
-    description: 'HTTP缓存是web应用优化的一个重要环节，了解HTTP缓存机制对于web应用的开发至关重要。',
+    description:
+      'HTTP缓存是web应用优化的一个重要环节，了解HTTP缓存机制对于web应用的开发至关重要。',
     content: Article10
   },
   {
@@ -128,7 +131,8 @@ import Article13 from './article13.md'
     tag: 4,
     date: '2017-10-20',
     path: 'the-http-2-features',
-    description: 'HTTP2.0的诞生使得请求访问更加高效，为我们进一步优化应用和提升性能提供了全新的机会！',
+    description:
+      'HTTP2.0的诞生使得请求访问更加高效，为我们进一步优化应用和提升性能提供了全新的机会！',
     content: Article11
   },
   {
@@ -137,7 +141,8 @@ import Article13 from './article13.md'
     tag: 1,
     date: '2017-11-10',
     path: 'the-secret-of-bfc',
-    description: '听到BFC这个名字，你可能觉得陌生，但是作为天天写前端布局的程序猿来说，其实你无意中已经用了无数次了。今天我给大家介绍介绍，BFC到底是个什么玩意。',
+    description:
+      '听到BFC这个名字，你可能觉得陌生，但是作为天天写前端布局的程序猿来说，其实你无意中已经用了无数次了。今天我给大家介绍介绍，BFC到底是个什么玩意。',
     content: Article12
   },
   {
@@ -146,7 +151,8 @@ import Article13 from './article13.md'
     tag: 6,
     date: '2018-01-14',
     path: 'my-2017',
-    description: '时光虽匆匆，回首翘望，会是另一番景象。光阴无情，但会给你留下一段段美好的回忆。我的2017，我的精彩生活。',
+    description:
+      '时光虽匆匆，回首翘望，会是另一番景象。光阴无情，但会给你留下一段段美好的回忆。我的2017，我的精彩生活。',
     content: Article13
   }
 ]
