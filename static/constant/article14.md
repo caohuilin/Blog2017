@@ -6,9 +6,9 @@
 
 大家看到的这张图就是我们的初始效果，一张可爱的笑脸，当然是希望大家学习、生活、工作中每天都能微笑面对，少踩坑，多成就。
 
-![smile_origin](../smile_origin.svg)
+![smile_origin](../../static/smile_origin.svg)
 
-需求的功能分为以下几点
+需求的功能分为以下几点
 
 - 给笑脸加一个阴影，类似于太阳光的那种（把你的笑脸挥洒给身边的每一位热爱生活的朋友、同事，甚至是陌生人）
 - 当鼠标位于笑脸上方时，阴影才显示
@@ -47,7 +47,7 @@
 
 最终的效果如下图：
 
-![smile_shadow](../smile_shadow.svg)
+![smile_shadow](../../static/smile_shadow.svg)
 
 ### 当鼠标位于笑脸上方时，阴影才显示
 
@@ -81,7 +81,7 @@
 
 这样效果就实现了。
 
-![smild_hover](../smile_hover.gif)
+![smild_hover](../../static/smile_hover.gif)
 
 ### 鼠标位于阴影边框上时，阴影不能消失
 

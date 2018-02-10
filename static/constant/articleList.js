@@ -12,6 +12,7 @@ import Article10 from './article10.md'
 import Article11 from './article11.md'
 import Article12 from './article12.md'
 import Article13 from './article13.md'
+import Article14 from './article14.md'
 /**
  * @type {[{id:number,title:string,tag:number,date:string,path:string,description:string,content:string}]}
  */
@@ -154,6 +155,16 @@ const articleList = [
     description:
       '时光虽匆匆，回首翘望，会是另一番景象。光阴无情，但会给你留下一段段美好的回忆。我的2017，我的精彩生活。',
     content: Article13
+  },
+  {
+    id: 14,
+    title: '记一次有趣的需求实现 --- SVG 事件绑定',
+    tag: 3,
+    date: '2018-02-10',
+    path: 'svg-event-bind',
+    description:
+      '前一段时间在做一些关于 SVG 的工作，虽然做前端已经一年多了，接触真正的 SVG 操作我还是第一次，当然也避免不了踩一些坑。今天趁有空，总结一下里面最有意思的一个需求的实现，与大家分享。',
+    content: Article14
   }
 ]
 
