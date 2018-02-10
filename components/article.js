@@ -63,8 +63,8 @@ class Article extends React.Component {
     const top = `${392 + 250 * k}px`
     const width = this.state.width
     const pageWidth = this.state.pageWidth
-    const left = currentId % 2 ? '50%' : '60px'
-    const transformX = pageWidth < 420 ? 0 : (currentId % 2 ? `calc(-${width / 2}px)` : `calc(50% - ${width}px)`)
+    const left = currentId % 2 ? '50%' : '0px'
+    const transformX = pageWidth < 420 ? 0 : (currentId % 2 ? `calc(-${width / 2}px)` : `calc(50% - ${width / 2}px)`)
     const translateStyle = this.state.ready
       ? {
           transform: `translate(${transformX}, -${392 + 250 * k}px)`,
