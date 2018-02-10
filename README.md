@@ -8,6 +8,8 @@ https://blog2017.hi-hi.cn/
 
 ## 博客列表
 
+- [记一次有趣的需求实现 --- SVG 事件绑定][15]
+
 - [我的2017][14]
 
 - [BFC的秘密][13]
@@ -51,6 +53,7 @@ https://blog2017.hi-hi.cn/
   [12]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article11.md
   [13]: https://blog2017.hi-hi.cn/article/12/the-secret-of-bfc
   [14]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article13.md
+  [15]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article14.md
 
 
 ## 技术
