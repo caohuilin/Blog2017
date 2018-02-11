@@ -13,6 +13,7 @@ import Article11 from './article11.md'
 import Article12 from './article12.md'
 import Article13 from './article13.md'
 import Article14 from './article14.md'
+import Article15 from './article15.md'
 /**
  * @type {[{id:number,title:string,tag:number,date:string,path:string,description:string,content:string}]}
  */
@@ -165,6 +166,16 @@ const articleList = [
     description:
       '前一段时间在做一些关于 SVG 的工作，虽然做前端已经一年多了，接触真正的 SVG 操作我还是第一次，当然也避免不了踩一些坑。今天趁有空，总结一下里面最有意思的一个需求的实现，与大家分享。',
     content: Article14
+  },
+  {
+    id: 15,
+    title: '非文本元素的展开与收起',
+    tag: 1,
+    date: '2018-02-11',
+    path: 'non-text-element-expands-and-closes',
+    description:
+      '非文本元素过长，要隐藏多余部分，显示省略号，应该怎么做？',
+    content: Article15
   }
 ]
 
