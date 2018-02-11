@@ -30,7 +30,9 @@
  display: -webkit-box;
  -webkit-box-orient: vertical;
  -swebkit-line-clamp: 4;
-```
+``` 
+
+> 该属性目前只支持Chrome和Safari浏览器，还是要慎用！
 
 ### Two
 
