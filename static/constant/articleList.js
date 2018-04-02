@@ -11,6 +11,7 @@ import Article9 from './article9.md'
 import Article10 from './article10.md'
 import Article11 from './article11.md'
 import Article12 from './article12.md'
+import Article13 from './article13.md'
 /**
  * @type {[{id:number,title:string,tag:number,date:string,path:string,description:string,content:string}]}
  */
@@ -138,6 +139,15 @@ import Article12 from './article12.md'
     path: 'the-secret-of-bfc',
     description: '听到BFC这个名字，你可能觉得陌生，但是作为天天写前端布局的程序猿来说，其实你无意中已经用了无数次了。今天我给大家介绍介绍，BFC到底是个什么玩意。',
     content: Article12
+  },
+  {
+    id: 13,
+    title: 'TypeScript究竟干了什么',
+    tag: 3,
+    date: '2017-12-17',
+    path: 'what-does-typescript-do',
+    description: 'TypeScript的诞生可以说是解决了JavaScript的很多痛点，对于很多开发来说是一种久违的熟悉感，它究竟干了什么，能够让使用它的人爱不释手。',
+    content: Article13
   }
 ]
 

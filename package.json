@@ -11,6 +11,7 @@
     "classnames": "^2.2.5",
     "glob": "^7.1.2",
     "isomorphic-unfetch": "^2.0.0",
+    "json-formatter-js": "^2.2.0",
     "lodash": "^4.17.4",
     "marked": "^0.3.6",
     "mobx": "^2.7.0",
