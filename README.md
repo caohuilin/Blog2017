@@ -8,6 +8,8 @@ https://blog2017.hi-hi.cn/
 
 ## 博客列表
 
+- [团队协作工具之一 ————Git][17]
+
 - [非文本元素的展开与收起][16]
 
 - [记一次有趣的需求实现 --- SVG 事件绑定][15]
@@ -57,6 +59,7 @@ https://blog2017.hi-hi.cn/
   [14]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article13.md
   [15]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article14.md
   [16]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article15.md
+  [17]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article16.md
 
 
 ## 技术

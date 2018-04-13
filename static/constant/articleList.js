@@ -14,6 +14,7 @@ import Article12 from './article12.md'
 import Article13 from './article13.md'
 import Article14 from './article14.md'
 import Article15 from './article15.md'
+import Article16 from './article16.md'
 /**
  * @type {[{id:number,title:string,tag:number,date:string,path:string,description:string,content:string}]}
  */
@@ -176,6 +177,16 @@ const articleList = [
     description:
       '非文本元素过长，要隐藏多余部分，显示省略号，应该怎么做？',
     content: Article15
+  },
+  {
+    id: 16,
+    title: '团队协作工具之一 ————Git',
+    tag: 6,
+    date: '2018-04-13',
+    path: 'One of the team collaboration tools -- Git',
+    description:
+      '工作过程中git使用的一些心得与大家分享。',
+    content: Article16
   }
 ]
 
