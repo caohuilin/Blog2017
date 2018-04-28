@@ -183,7 +183,7 @@ const articleList = [
     title: '团队协作工具之一 ————Git',
     tag: 6,
     date: '2018-04-13',
-    path: 'One of the team collaboration tools -- Git',
+    path: 'one-of-the-team-collaboration-tools--git',
     description:
       '工作过程中git使用的一些心得与大家分享。',
     content: Article16
