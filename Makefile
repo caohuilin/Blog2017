@@ -1,4 +1,4 @@
-VERSION:=3
+VERSION:=8
 
 build:
 	npm run build
