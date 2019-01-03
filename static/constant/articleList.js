@@ -15,6 +15,7 @@ import Article13 from './article13.md'
 import Article14 from './article14.md'
 import Article15 from './article15.md'
 import Article16 from './article16.md'
+import Article17 from './article17.md'
 /**
  * @type {[{id:number,title:string,tag:number,date:string,path:string,description:string,content:string}]}
  */
@@ -187,6 +188,16 @@ const articleList = [
     description:
       '工作过程中git使用的一些心得与大家分享。',
     content: Article16
+  },
+  {
+    id: 17,
+    title: '我的2018',
+    tag: 6,
+    date: '2018-12-31',
+    path: 'my-2018',
+    description:
+      '又是一年的结束，又是新一年的开始，在忙碌的生活中寻找生命的意义。',
+    content: Article17
   }
 ]
 
