@@ -2,8 +2,9 @@
 
 近期打算准备重构我17年写的博客项目，打开项目看到了下图的一条安全漏洞的提示。
 
-![lodash-1](../../static/lodash-1.png)
-![lodash-2](../../static/lodash-2.png)
+ <img src="../../static/lodash-1.png" width = "100%" alt="lodash-1" />
+ <img src="../../static/lodash-2.png" width = "80%" alt="lodash-2" />
+
 
 使用 lodash 这么多年，居然有高危漏洞，好奇心驱使我继续探索。
 
@@ -16,12 +17,11 @@
 ```
 - npm audit
 ```
-![lodash-3](../../static/lodash-3.png)
+ <img src="../../static/lodash-3.png" width = "60%" alt="lodash-3" />
 
 图中网站地址： https://www.npmjs.com/advisories/577![lodash-4]
 
-
-![lodash-4](../../static/lodash-4.png)
+<img src="../../static/lodash-4.png" width = "50%" alt="lodash-4" />
 
 图中 HackerOneReport 地址：https://hackerone.com/reports/310443
 
@@ -31,12 +31,12 @@
 
 尝试一把：
 
-![lodash-5](../../static/lodash-5.png)
-![lodash-6](../../static/lodash-6.png)
+<img src="../../static/lodash-5.png" width = "70%" alt="lodash-5" />
+<img src="../../static/lodash-6.png" width = "70%" alt="lodash-6" />
 
 使用 ES6 assign 实现:
 
-![lodash-7](../../static/lodash-7.png)
+<img src="../../static/lodash-7.png" width = "70%" alt="lodash-7" />
 
 果然是有问题的。
 
@@ -46,7 +46,7 @@
 
 核心代码：
 
-![lodash-8](../../static/lodash-8.png)
+<img src="../../static/lodash-8.png" width = "60%" alt="lodash-8" />
 
 结论： 实现了一个 safeGet 的函数来避免获取原型上的值。
 
