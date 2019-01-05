@@ -16,7 +16,7 @@ export default class Content extends React.Component {
     )
   }
 
-  getInitialProps({ req }) {
+  static getInitialProps({ req }) {
     const isServer = !!req
     const store = initStore(isServer)
     return {
