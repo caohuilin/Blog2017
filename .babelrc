@@ -4,20 +4,20 @@
       "next/babel",
       {
         "styled-jsx": {
-          "plugins": [
-            "styled-jsx-plugin-postcss"
-          ]
+          "plugins": ["styled-jsx-plugin-postcss"]
         }
       }
     ]
   ],
   "plugins": [
-    "transform-decorators-legacy",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
     [
       "wrap-in-js",
       {
         "extensions": ["md$"]
       }
-    ]
+    ],
+    "transform-class-properties",
+    ["@babel/plugin-proposal-class-properties", { "loose": true }]
   ]
 }

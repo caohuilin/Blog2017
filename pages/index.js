@@ -16,7 +16,7 @@ export default class Home extends React.Component {
     )
   }
 
-  getInitialProps({ req }) {
+  static getInitialProps({ req }) {
     const isServer = !!req
     const store = initStore(isServer)
     return {
