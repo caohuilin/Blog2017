@@ -19,7 +19,7 @@
     "mobx": "5.8.0",
     "mobx-react": "5.4.3",
     "next": "7.0.2",
-    "next-routes": "1.1.0",
+    "next-routes": "1.4.2",
     "normalize.css": "7.0.0",
     "react": "16.7.0",
     "react-dom": "16.7.0",
