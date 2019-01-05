@@ -8,6 +8,8 @@ https://blog2017.hi-hi.cn/
 
 ## 博客列表
 
+- [探索 lodash 的一个安全漏洞][19]
+
 - [我的2018][18]
 
 - [团队协作工具之一 ————Git][17]
@@ -63,6 +65,7 @@ https://blog2017.hi-hi.cn/
   [16]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article15.md
   [17]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article16.md
   [18]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article17.md
+  [19]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article19.md
 
 
 ## 技术
