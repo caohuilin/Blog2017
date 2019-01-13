@@ -19,7 +19,7 @@
 ```
  <img src="../../static/lodash-3.png" width = "60%" alt="lodash-3" />
 
-图中网站地址： https://www.npmjs.com/advisories/577![lodash-4]
+图中网站地址： https://www.npmjs.com/advisories/577
 
 <img src="../../static/lodash-4.png" width = "50%" alt="lodash-4" />
 
