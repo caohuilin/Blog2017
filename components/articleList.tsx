@@ -47,10 +47,10 @@ class ArticleList extends React.Component<IArticleListProps, {}> {
 							return (
 								<li key={i}>
 									<Link href={`article?id=${item.id}&path=${item.path}`}>
-                    <h3 className={`title ${textShadowClass}`}>
-                      <a>{item.title}</a>
-                      <span />
-                    </h3>
+										<h3 className={`title ${textShadowClass}`}>
+											<a>{item.title}</a>
+											<span />
+										</h3>
 									</Link>
 									<div className={`introduction ${blurClass}`}>{item.description}</div>
 									<div className={`information ${blurClass}`}>
