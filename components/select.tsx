@@ -1,17 +1,20 @@
 import * as React from 'react'
-import Link from 'next/link'
 import classnames from 'classnames'
 import { Motion, spring } from 'react-motion'
 import { inject, observer } from 'mobx-react'
 import * as _ from 'lodash'
+import { Store } from '../store';
 import selects from '../static/constant/selects'
 
+interface ISelectProps{
+  store?: Store
+}
 @inject('store')
 @observer
-class Select extends React.Component {
-  timer = null
-  timer2 = null
-  getPosition = id => {
+class Select extends React.Component<ISelectProps, {}> {
+  timer: any = null
+  timer2: any = null
+  getPosition = (id: number) => {
     switch (id) {
       case 0:
         return 0
@@ -28,11 +31,11 @@ class Select extends React.Component {
     }
   }
   showMenu = () => {
-    this.props.store.showMenu()
+    this.props.store!.showMenu()
   }
 
   hideMenu = () => {
-    this.timer2 = setTimeout(this.props.store.hideMenu, 500)
+    this.timer2 = setTimeout(this.props.store!.hideMenu, 500)
   }
 
   handleMouseOver = () => {
@@ -43,11 +46,11 @@ class Select extends React.Component {
     if (this.timer) clearTimeout(this.timer)
     this.hideMenu()
   }
-  handleScroll = e => {
+  handleScroll = (e: any) => {
     e.preventDefault()
     e.stopPropagation()
     const y = e.deltaY
-    const currentMenu = this.props.store.currentMenu
+    const currentMenu = this.props.store!.currentMenu
     let nextMenu = currentMenu
     if (y > 100) {
       nextMenu = nextMenu + 1 === selects.length ? 0 : nextMenu + 1
@@ -56,13 +59,13 @@ class Select extends React.Component {
       nextMenu = nextMenu - 1 === -1 ? selects.length - 1 : nextMenu - 1
     }
     if (nextMenu !== currentMenu) {
-      this.props.store.changeCurrentMenu(nextMenu)
+      this.props.store!.changeCurrentMenu(nextMenu)
     }
   }
-  handleKeyDown = e => {
+  handleKeyDown = (e: any) => {
     const code = e.keyCode
-    const currentMenu = this.props.store.currentMenu
-    const showSelectMenu = this.props.store.showSelectMenu
+    const currentMenu = this.props.store!.currentMenu
+    const showSelectMenu = this.props.store!.showSelectMenu
     let nextMenu = currentMenu
     if (showSelectMenu) {
       if (code === 38) {
@@ -72,12 +75,12 @@ class Select extends React.Component {
         nextMenu = nextMenu - 1 === -1 ? selects.length - 1 : nextMenu - 1
       }
       if (nextMenu !== currentMenu) {
-        this.props.store.changeCurrentMenu(nextMenu)
+        this.props.store!.changeCurrentMenu(nextMenu)
       }
     }
   }
-  handleClick = id => {
-    this.props.store.changeCurrentMenu(id)
+  handleClick = (id: number) => {
+    this.props.store!.changeCurrentMenu(id)
   }
   throttledScroll = _.throttle(this.handleScroll, 500, { trailing: false })
   throttledKeyDown = _.throttle(this.handleKeyDown, 100, { trailing: false })
@@ -90,7 +93,7 @@ class Select extends React.Component {
     if (this.timer2) clearTimeout(this.timer2)
   }
   render() {
-    const { showSelectMenu, currentMenu } = this.props.store
+    const { showSelectMenu, currentMenu } = this.props.store!
     return (
       <div className="menu">
         <div className="selected">
@@ -106,7 +109,6 @@ class Select extends React.Component {
               const opacity = (showSelectMenu && k <= 2) || k === 0 ? 1 - Math.abs(k) * 0.2 : 0
               const translate = showSelectMenu ? this.getPosition(k) : 0
               const filter = Math.abs(k) / 5.0
-              const background = showSelectMenu ? '#ffffff' : 'transparent'
               return (
                 <Motion key={item.id} style={{ x: spring(translate), y: spring(opacity) }}>
                   {({ x, y }) => {

@@ -1,13 +1,23 @@
 import React from 'react'
+import { get, toNumber } from 'lodash'
 import { Provider } from 'mobx-react'
+import { withRouter } from 'next/router'
+import { WithRouterProps } from 'next/dist/client/with-router';
 import Layout from '../components/layout'
 import Article from '../components/article'
-import { initStore } from '../store'
+import { initStore, Store } from '../store'
 import articleList from '../static/constant/articleList'
 import style from '../styles/main.css'
 
-export default class Content extends React.Component {
-  constructor(props) {
+interface IArticleProps extends WithRouterProps {
+  isServer:boolean
+  showSelectMenu: boolean
+  currentMenu: number
+}
+
+export class Content extends React.Component<IArticleProps, {}> {
+  store: Store
+  constructor(props: IArticleProps) {
     super(props)
     this.store = initStore(
       props.isServer,
@@ -16,7 +26,7 @@ export default class Content extends React.Component {
     )
   }
 
-  static getInitialProps({ req }) {
+  static getInitialProps({ req }: any) {
     const isServer = !!req
     const store = initStore(isServer)
     return {
@@ -27,7 +37,8 @@ export default class Content extends React.Component {
   }
 
   render() {
-    const id = this.props.url.query.id
+    const { query } = this.props.router
+    const id = toNumber(get(query, 'id'))
     const article = articleList[articleList.length - id - 1]
     return (
       <Provider store={this.store}>
@@ -39,3 +50,5 @@ export default class Content extends React.Component {
     )
   }
 }
+
+export default withRouter<IArticleProps>(Content as any)

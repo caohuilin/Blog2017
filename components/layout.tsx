@@ -2,20 +2,25 @@ import Head from 'next/head';
 import React from 'react';
 import Link from 'next/link';
 import { inject, observer } from 'mobx-react';
+import { Store } from '../store';
 import reset from '../styles/reset.css';
 import layout from '../styles/layout.css';
 
+interface ILayoutProps {
+  store?: Store
+  title: string
+}
 @inject('store')
 @observer
-export default class Layout extends React.Component {
-  handleWheel = e => {
-    if (this.props.store.disableScroll) {
+export default class Layout extends React.Component<ILayoutProps, {}> {
+  handleWheel = (e: any) => {
+    if (this.props.store!.disableScroll) {
       e.preventDefault();
     }
   };
 
-  handleKeyDown = e => {
-    if (this.props.store.disableScroll) {
+  handleKeyDown = (e: any) => {
+    if (this.props.store!.disableScroll) {
       e.preventDefault();
     }
   };
@@ -32,7 +37,7 @@ export default class Layout extends React.Component {
 
   render() {
     const { title, children } = this.props;
-    const { showSelectMenu } = this.props.store;
+    const { showSelectMenu } = this.props.store!;
     const blurStyle = showSelectMenu
       ? {
           filter: `blur(10px)`,
@@ -58,7 +63,7 @@ export default class Layout extends React.Component {
           <div className="page">
             <header>
               <div id="logo" style={blurStyle}>
-                <Link href="/">=CHL</Link>
+                <Link href="/"><a>=CHL</a></Link>
               </div>
               <nav>
                 <ul>
