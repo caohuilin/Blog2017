@@ -1,16 +1,25 @@
 import * as React from 'react'
-import Link from 'next/link'
-import { Motion, spring } from 'react-motion'
 import { inject, observer } from 'mobx-react'
 import * as _ from 'lodash'
 import marked from 'marked'
 import classnames from 'classnames'
 import articleList from '../static/constant/articleList'
+import { Store } from '../store';
 
+interface IArticleProps {
+  store?: Store
+  id: number
+}
+
+interface IArticleState {
+  ready: boolean,
+  width: number,
+  pageWidth: number
+}
 @inject('store')
 @observer
-class Article extends React.Component {
-  constructor(props) {
+class Article extends React.Component<IArticleProps, IArticleState> {
+  constructor(props: IArticleProps) {
     super(props)
     this.state = {
       ready: false,
@@ -18,8 +27,8 @@ class Article extends React.Component {
       pageWidth: 0
     }
   }
-  getCurrentId = id => {
-    const { currentMenu } = this.props.store
+  getCurrentId = (id: number) => {
+    const { currentMenu } = this.props.store!
     const currentList = articleList.filter(item => currentMenu === 2 || item.tag === currentMenu)
     let currentId = 0
     currentList.map((item, i) => {
@@ -30,32 +39,30 @@ class Article extends React.Component {
     })
     return currentId
   }
-  likeArticle = id => {
+  likeArticle = (id: number) => {
     const likeArticleList = window ? window.localStorage.getItem('likeArticleList') : null
     let list =  likeArticleList ? JSON.parse(likeArticleList) : []
     if (list.indexOf(id) !== -1) {
-      list = list.filter(item => item !== id)
+      list = list.filter((item: number) => item !== id)
     } else {
       list.push(id)
     }
     localStorage.setItem('likeArticleList', JSON.stringify(list))
-    this.props.store.setLikeArticleList(list)
+    this.props.store!.setLikeArticleList(list)
   }
   componentDidMount() {
     const likeArticleList = window ? window.localStorage.getItem('likeArticleList') : null
     const list = likeArticleList ? JSON.parse(likeArticleList) : []
-    this.props.store.setLikeArticleList(list)
+    this.props.store!.setLikeArticleList(list)
     setTimeout(() => {
       this.setState({ ready: true })
     }, 100)
-    const width = document.getElementsByClassName('move-title-span')[0]
-      .offsetWidth
-    const pageWidth = document.getElementsByClassName('page')[0]
-      .offsetWidth
+    const width = (document.getElementsByClassName('move-title-span')[0] as any).offsetWidth
+    const pageWidth = (document.getElementsByClassName('page')[0] as any).offsetWidth
     this.setState({ width, pageWidth })
   }
   render() {
-    const { likeArticleList } = this.props.store
+    const { likeArticleList } = this.props.store!
     const id = +this.props.id
     const currentId = this.getCurrentId(id)
     const article = articleList[articleList.length - id - 1]
@@ -75,7 +82,7 @@ class Article extends React.Component {
           top: top,
           left: left
         }
-    const displayStyle = this.state.ready
+    const displayStyle: any = this.state.ready
       ? {
           opacity: 1
         }
