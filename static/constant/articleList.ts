@@ -17,6 +17,7 @@ import Article15 from './article15.md'
 import Article16 from './article16.md'
 import Article17 from './article17.md'
 import Article18 from './article18.md'
+import Article19 from './article19.md'
 
 export interface IArticle {
 	id: number
@@ -207,6 +208,15 @@ const articleList: IArticle[] = [
 		path: 'lodash-avoid-merging-properties-on-to-__proto__-objects',
 		description: '一次 lodash 安全漏洞的探索历程 --- 原型污染',
 		content: Article18,
+  },
+  {
+		id: 19,
+		title: '错误边界(Error Boundaries)',
+		tag: 5,
+		date: '2019-09-09',
+		path: 'error-boundaries',
+		description: 'React16错误边界的定义及使用',
+		content: Article19,
 	},
 ]
 
