@@ -8,6 +8,8 @@ https://blog2017.hi-hi.cn/
 
 ## 博客列表
 
+- [错误边界(Error Boundaries)][20]
+
 - [探索 lodash 的一个安全漏洞][19]
 
 - [我的2018][18]
@@ -66,6 +68,7 @@ https://blog2017.hi-hi.cn/
   [17]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article16.md
   [18]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article17.md
   [19]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article18.md
+  [20]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article19.md
 
 
 ## 技术
@@ -73,6 +76,7 @@ https://blog2017.hi-hi.cn/
 - next
 - react
 - mobx
+- typescript
 - postcss
 
 ## 项目安装部署
