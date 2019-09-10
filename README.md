@@ -8,6 +8,8 @@ https://blog2017.hi-hi.cn/
 
 ## 博客列表
 
+- [React升级踩坑记——Popover-Portals-Click][21]
+
 - [错误边界(Error Boundaries)][20]
 
 - [探索 lodash 的一个安全漏洞][19]
@@ -69,6 +71,7 @@ https://blog2017.hi-hi.cn/
   [18]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article17.md
   [19]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article18.md
   [20]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article19.md
+  [21]: https://github.com/caohuilin/Blog2017/blob/master/static/constant/article21.md
 
 
 ## 技术

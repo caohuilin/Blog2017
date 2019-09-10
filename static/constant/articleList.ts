@@ -18,6 +18,7 @@ import Article16 from './article16.md'
 import Article17 from './article17.md'
 import Article18 from './article18.md'
 import Article19 from './article19.md'
+import Article20 from './article20.md'
 
 export interface IArticle {
 	id: number
@@ -217,6 +218,15 @@ const articleList: IArticle[] = [
 		path: 'error-boundaries',
 		description: 'React16错误边界的定义及使用',
 		content: Article19,
+  },
+  {
+		id: 20,
+		title: 'React升级踩坑记——Popover-Portals-Click',
+		tag: 5,
+		date: '2019-09-10',
+		path: 'portals',
+		description: 'React升级过程中遇到了一个点击事件的问题，从而进行了一次React Portal的探索。',
+		content: Article20,
 	},
 ]
 
