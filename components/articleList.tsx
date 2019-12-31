@@ -48,7 +48,7 @@ class ArticleList extends React.Component<IArticleListProps, {}> {
 								<li key={i}>
 									<Link href={`article?id=${item.id}&path=${item.path}`}>
 										<h3 className={`title ${textShadowClass}`}>
-											<a>{item.title}</a>
+											<a href={`article?id=${item.id}&path=${item.path}`}>{item.title}</a>
 											<span />
 										</h3>
 									</Link>
