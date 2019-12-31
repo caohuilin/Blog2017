@@ -19,6 +19,7 @@ import Article17 from './article17.md'
 import Article18 from './article18.md'
 import Article19 from './article19.md'
 import Article20 from './article20.md'
+import Article21 from './article21.md'
 
 export interface IArticle {
 	id: number
@@ -227,6 +228,15 @@ const articleList: IArticle[] = [
 		path: 'portals',
 		description: 'React升级过程中遇到了一个点击事件的问题，从而进行了一次React Portal的探索。',
 		content: Article20,
+	},
+    {
+		id: 21,
+		title: '我的2019',
+		tag: 5,
+		date: '2019-12-31',
+		path: 'my-2019',
+		description: '奔跑前行，追求自己心中的目标， 不忘回首，坚定自己不变的理想。',
+		content: Article21,
 	},
 ]
 
