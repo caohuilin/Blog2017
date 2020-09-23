@@ -6,7 +6,7 @@
 
 下图是我的一个项目场景，标准的 Antd Table，亮点在于操作栏，我们把不常用的操作通过 Popover 的方式隐藏在了省略号当中，当然我还支持整行的点击，去选中某一行进行操作。
 
-<img src="../../static/portal.png" width = "50%" alt="lodash-4" />
+<img src="https://chl-blog-1251008148.file.myqcloud.com/static/portal.png" width = "50%" alt="lodash-4" />
 
 我简单的还原了一下当时的场景： https://github.com/caohuilin/Portal-Example/blob/master/src/table.tsx
 
@@ -15,7 +15,7 @@
 在 Popover 没有设置 getPopupContainer 时，其 content 会挂载在 body 上面，当然 content 上的点击事件不会影响 onRow 上的 click 事件。但是神奇的是，升级之后 onRow 的 click 事件居然可以接收到 content 上的点击事件，你可以运行上面代码试试。
 好奇的我想一探究竟，果断去翻源码，Popover -> Tooltip -> rc-tooltip -> rc-trigger，终于翻到了一行:
 
- <img src="../../static/portal-2.png" width = "50%" alt="lodash-4" />
+ <img src="https://chl-blog-1251008148.file.myqcloud.com/static/portal-2.png" width = "50%" alt="lodash-4" />
  
 源码中通过是否支持 createPortal 来判断 React 版本是不是 16，再到代码深处，在此判断的基础上分别使用的是 rc-util 中两个组件，一个是 Portal，一个是 ContainerRender 来实现的。
 

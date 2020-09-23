@@ -1,0 +1,24 @@
+# serverless.yml
+component: nextjs # (必填) 组件名称，此处为nextjs
+name: chl_blog # (必填) 实例名称
+app: chl_blog # (可选) 该 next.js 应用名称
+stage: dev # (可选) 用于区分环境信息，默认值是 dev
+
+inputs:
+  src: 
+    src: ./
+    exclude:
+      - .env
+      - node_modules
+  functionName: chl_blog
+  region: ap-hongkong
+  runtime: Nodejs10.15
+  apigatewayConf:
+    protocols:
+      - http
+      - https
+    environment: release
+  domain: blog.caohuilin.com
+  layers:
+    - name: ${output:${stage}:${app}:${name}-layer.name}
+      version: ${output:${stage}:${app}:${name}-layer.version}

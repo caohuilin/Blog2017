@@ -1,0 +1,11 @@
+name: chl_blog-layer # (必填) 实例名称
+app: chl_blog # (可选) 该 next.js 应用名称
+stage: dev # (可选) 用于区分环境信息，默认值是 dev
+component: layer
+
+inputs:
+  region: ap-hongkong
+  name: ${name}
+  src: ../node_modules
+  runtimes:
+    - Nodejs10.15
