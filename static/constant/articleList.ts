@@ -20,6 +20,7 @@ import Article18 from './article18.md'
 import Article19 from './article19.md'
 import Article20 from './article20.md'
 import Article21 from './article21.md'
+import Article22 from './article22.md'
 
 export interface IArticle {
 	id: number
@@ -232,12 +233,21 @@ const articleList: IArticle[] = [
     {
 		id: 21,
 		title: '我的2019',
-		tag: 5,
+		tag: 6,
 		date: '2019-12-31',
 		path: 'my-2019',
 		description: '奔跑前行，追求自己心中的目标， 不忘回首，坚定自己不变的理想。',
 		content: Article21,
 	},
+	{
+		id: 22,
+		title: 'React Hooks -- 实现一个 Steps 组件',
+		tag: 5,
+		date: '2020-09-10',
+		path: 'react-hooks-steps-component',
+		description: '记录使用 React Hooks 封装组件的一次体验。',
+		content: Article22,
+	}
 ]
 
 export default articleList.reverse()
