@@ -21,6 +21,7 @@ import Article19 from './article19.md'
 import Article20 from './article20.md'
 import Article21 from './article21.md'
 import Article22 from './article22.md'
+import Article23 from './article23.md'
 
 export interface IArticle {
 	id: number
@@ -247,6 +248,15 @@ const articleList: IArticle[] = [
 		path: 'react-hooks-steps-component',
 		description: '记录使用 React Hooks 封装组件的一次体验。',
 		content: Article22,
+	},
+	{
+		id: 23,
+		title: 'React Hooks -- 实现 useListStore',
+		tag: 5,
+		date: '2020-09-30',
+		path: 'react-hooks-use-list-store',
+		description: '记录自定义 Hooks 的一次体验。',
+		content: Article23,
 	}
 ]
 
