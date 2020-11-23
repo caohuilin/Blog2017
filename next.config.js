@@ -1,7 +1,8 @@
 const path = require('path')
 const glob = require('glob')
-
+const isProd = process.env.NODE_ENV === 'production'
 module.exports = {
+  assetPrefix: isProd ? 'https://chl-blog-1251008148.file.myqcloud.com' : '',
   webpack: function (config, { dev }) {
     // For the development version, we'll use React.
     // Because, it support react hot loading and so on.

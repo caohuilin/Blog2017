@@ -6,7 +6,7 @@
 
 大家看到的这张图就是我们的初始效果，一张可爱的笑脸，当然是希望大家学习、生活、工作中每天都能微笑面对，少踩坑，多成就。
 
-![smile_origin](../../static/smile_origin.svg)
+![smile_origin](https://chl-blog-1251008148.file.myqcloud.com/static/smile_origin.svg)
 
 需求的功能分为以下几点
 
@@ -47,7 +47,7 @@
 
 最终的效果如下图：
 
-![smile_shadow](../../static/smile_shadow.svg)
+![smile_shadow](https://chl-blog-1251008148.file.myqcloud.com/static/smile_shadow.svg)
 
 ### 当鼠标位于笑脸上方时，阴影才显示
 
@@ -81,7 +81,7 @@
 
 这样效果就实现了。
 
-![smild_hover](../../static/smile_hover.gif)
+![smild_hover](https://chl-blog-1251008148.file.myqcloud.com/static/smile_hover.gif)
 
 ### 鼠标位于阴影边框上时，阴影不能消失
 
@@ -109,7 +109,7 @@
 
 效果终于实现了！
 
-![smild_hover_2](../../static/smile_hover2.gif)
+![smild_hover_2](https://chl-blog-1251008148.file.myqcloud.com/static/smile_hover2.gif)
 
 这时的你松一口气准备做下一个需求了，突然鼠标不小心碰到了，迅速划过整个笑脸，你发现鼠标已在屏幕最下方，然而阴影还在，这又是怎么回事呢？
 
@@ -139,6 +139,6 @@
   };
 ```
 
-![smild_hover_3](../../static/smile_hover3.gif)
+![smild_hover_3](https://chl-blog-1251008148.file.myqcloud.com/static/smile_hover3.gif)
 
 shadow 和 smile 分别是指阴影和笑脸的透明的圆的 DOM，这样需求就圆满解决了，开心😊 ！
