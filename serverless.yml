@@ -5,7 +5,7 @@ app: chl_blog # (可选) 该 next.js 应用名称
 stage: dev # (可选) 用于区分环境信息，默认值是 dev
 
 inputs:
-  src: 
+  src:
     src: ./
     exclude:
       - .env
