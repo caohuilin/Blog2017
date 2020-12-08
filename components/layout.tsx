@@ -1,10 +1,10 @@
-import Head from 'next/head';
-import React from 'react';
-import Link from 'next/link';
-import { inject, observer } from 'mobx-react';
-import { Store } from '../store';
-import reset from '../styles/reset.css';
-import layout from '../styles/layout.css';
+import Head from 'next/head'
+import React from 'react'
+import Link from 'next/link'
+import { inject, observer } from 'mobx-react'
+import { Store } from '../store'
+import reset from '../styles/reset.css'
+import layout from '../styles/layout.css'
 
 interface ILayoutProps {
   store?: Store
@@ -15,38 +15,38 @@ interface ILayoutProps {
 export default class Layout extends React.Component<ILayoutProps, {}> {
   handleWheel = (e: any) => {
     if (this.props.store!.disableScroll) {
-      e.preventDefault();
+      e.preventDefault()
     }
-  };
+  }
 
   handleKeyDown = (e: any) => {
     if (this.props.store!.disableScroll) {
-      e.preventDefault();
+      e.preventDefault()
     }
-  };
+  }
 
   componentDidMount() {
-    document.body.addEventListener('wheel', this.handleWheel);
-    document.body.addEventListener('keydown', this.handleKeyDown);
+    document.body.addEventListener('wheel', this.handleWheel)
+    document.body.addEventListener('keydown', this.handleKeyDown)
   }
 
   componentWillUnmount() {
-    document.body.removeEventListener('wheel', this.handleWheel);
-    document.body.removeEventListener('keydown', this.handleKeyDown);
+    document.body.removeEventListener('wheel', this.handleWheel)
+    document.body.removeEventListener('keydown', this.handleKeyDown)
   }
 
   render() {
-    const { title, children } = this.props;
-    const { showSelectMenu } = this.props.store!;
+    const { title, children } = this.props
+    const { showSelectMenu } = this.props.store!
     const blurStyle = showSelectMenu
       ? {
           filter: `blur(10px)`,
-          transition: `0.3s filter linear`
+          transition: `0.3s filter linear`,
         }
       : {
           filter: `blur(0px)`,
-          transition: `0.3s filter linear`
-        };
+          transition: `0.3s filter linear`,
+        }
     return (
       <div>
         <Head>
@@ -63,7 +63,9 @@ export default class Layout extends React.Component<ILayoutProps, {}> {
           <div className="page">
             <header>
               <div id="logo" style={blurStyle}>
-                <Link href="/"><a>=CHL</a></Link>
+                <Link href="/">
+                  <a>=CHL</a>
+                </Link>
               </div>
               <nav>
                 <ul>
@@ -74,7 +76,7 @@ export default class Layout extends React.Component<ILayoutProps, {}> {
                   </li>
                   <li style={blurStyle}>
                     <a
-                      href="https://hi-hi.cn/chlresume/"
+                      href="https://resume.caohuilin.com"
                       target="_blank"
                       className="nav-link"
                     >
@@ -97,6 +99,6 @@ export default class Layout extends React.Component<ILayoutProps, {}> {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
